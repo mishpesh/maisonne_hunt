@@ -56,10 +56,8 @@ export default function ProductPage() {
       </div>
       <div className="product-detail">
         <div className="product-gallery">
-          <div
-            className={`main-product-image ${p.custom && gallery === 0 ? "is-3d" : ""}`}
-          >
-            {p.custom && gallery === 0 ? (
+          <div className={`main-product-image ${p.custom ? "is-3d" : ""}`}>
+            {p.custom ? (
               <Suspense
                 fallback={
                   <div className="render-loading">
@@ -75,42 +73,64 @@ export default function ProductPage() {
                       finish === 1 ? "walnut" : finish === 2 ? "ash" : "oak",
                   }}
                   compact
+                  view={
+                    gallery === 1
+                      ? "front"
+                      : gallery === 2
+                        ? "detail"
+                        : "perspective"
+                  }
                 />
               </Suspense>
             ) : (
               <img
-                src={imageUrl(gallery === 2 ? "hero" : p.image)}
+                src={imageUrl(p.gallery?.[gallery] || p.image)}
                 alt={p.name[lang]}
                 style={{
-                  objectPosition: gallery === 1 ? "center 70%" : "center",
-                  transform: gallery === 1 ? "scale(1.45)" : undefined,
+                  transform:
+                    gallery === 1 && !p.gallery ? "scale(1.45)" : undefined,
                 }}
               />
             )}
             {p.badge && <span className="product-badge">{t(p.badge)}</span>}
+            {p.custom && (
+              <span className="gallery-view-label">
+                <Box size={16} />
+                {t("studioFullProduct")} · 3D
+              </span>
+            )}
           </div>
           <div className="gallery-thumbnails">
-            {[0, 1, 2].map((i) => (
-              <button
-                className={gallery === i ? "active" : ""}
-                key={i}
-                onClick={() => setGallery(i)}
-                aria-label={`${p.name[lang]} — ${i + 1}`}
-              >
-                {p.custom && i === 0 ? (
-                  <Box size={28} strokeWidth={1} />
-                ) : (
-                  <img
-                    src={imageUrl(i === 2 ? "hero" : p.image)}
-                    alt=""
-                    style={{
-                      objectPosition: i === 1 ? "center 75%" : "center",
-                    }}
-                  />
-                )}
-                {p.custom && i === 0 && <span>3D</span>}
-              </button>
-            ))}
+            {Array.from(
+              { length: p.custom ? 3 : p.gallery?.length || 2 },
+              (_, i) => {
+                const label = p.custom
+                  ? i === 1
+                    ? "studioFront"
+                    : i === 2
+                      ? "studioDetailView"
+                      : "studioPerspective"
+                  : i === 1
+                    ? "studioDetailView"
+                    : "studioPhotoView";
+                return (
+                  <button
+                    className={gallery === i ? "active" : ""}
+                    key={i}
+                    onClick={() => setGallery(i)}
+                    aria-label={`${p.name[lang]} — ${t(label)}`}
+                    aria-pressed={gallery === i}
+                  >
+                    {p.custom ? (
+                      <Box size={27} strokeWidth={1} />
+                    ) : (
+                      <img src={imageUrl(p.gallery?.[i] || p.image)} alt="" />
+                    )}
+                    {p.custom && <span>{t(label)}</span>}
+                  </button>
+                );
+              },
+            )}
           </div>
         </div>
         <div className="product-purchase">

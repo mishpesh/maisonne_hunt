@@ -4,12 +4,12 @@ import type { Language, TranslationKey } from "./i18n";
 export type Category =
   "sofas" | "tables" | "chairs" | "beds" | "wardrobes" | "storage";
 export const categories: { id: Category; image: string; count: number }[] = [
-  { id: "sofas", image: "sofa", count: 2 },
-  { id: "tables", image: "dining", count: 2 },
-  { id: "chairs", image: "armchair", count: 2 },
-  { id: "beds", image: "bed", count: 2 },
-  { id: "wardrobes", image: "brume", count: 2 },
-  { id: "storage", image: "shelves", count: 2 },
+  { id: "sofas", image: "catalog/alba.jpg", count: 2 },
+  { id: "tables", image: "catalog/oslo.jpg", count: 2 },
+  { id: "chairs", image: "catalog/milo.jpg", count: 2 },
+  { id: "beds", image: "catalog/lune.jpg", count: 2 },
+  { id: "wardrobes", image: "catalog/atelier.png", count: 2 },
+  { id: "storage", image: "catalog/forma.jpg", count: 2 },
 ];
 export type Product = {
   id: string;
@@ -17,6 +17,7 @@ export type Product = {
   description: Record<Language, string>;
   category: Category;
   image: string;
+  gallery?: string[];
   price: number;
   colors: string[];
   finishNames: TranslationKey[];
@@ -37,7 +38,7 @@ export const products: Product[] = [
       "An inviting three-seater with easy lines.",
     ),
     category: "sofas",
-    image: "sofa",
+    image: "catalog/alba.jpg",
     price: 1290,
     colors: ["#536f54", "#c9bdab", "#555253"],
     finishNames: ["sage", "cream", "charcoal"],
@@ -58,7 +59,7 @@ export const products: Product[] = [
       "A softly curved seat for everyday gatherings.",
     ),
     category: "chairs",
-    image: "armchair",
+    image: "catalog/milo.jpg",
     price: 395,
     colors: ["#c7b897", "#ded8cb", "#555253"],
     finishNames: ["natural", "cream", "charcoal"],
@@ -79,15 +80,15 @@ export const products: Product[] = [
       "The meeting point for your everyday.",
     ),
     category: "tables",
-    image: "dining",
+    image: "catalog/oslo.jpg",
     price: 690,
     colors: ["#e8e1d1", "#414443", "#b49264"],
-    finishNames: ["cream", "charcoal", "woodOak"],
-    dimensions: [180, 75, 90],
+    finishNames: ["woodAsh", "charcoal", "woodOak"],
+    dimensions: [105, 75, 105],
     material: names(
-      "Plateau en céramique, pieds métal",
-      "Keramisch blad, metalen poten",
-      "Ceramic top, metal legs",
+      "Placage de frêne, pieds en bois massif",
+      "Essenfineer, massief houten poten",
+      "Ash veneer, solid timber legs",
     ),
   },
   {
@@ -99,8 +100,8 @@ export const products: Product[] = [
       "A wardrobe designed around your space.",
     ),
     category: "wardrobes",
-    image: "atelier",
-    price: 1190,
+    image: "catalog/atelier.png",
+    price: configurationPrice(initialConfiguration),
     colors: ["#b49264", "#70513b", "#ded2b8"],
     finishNames: ["woodOak", "woodWalnut", "woodAsh"],
     dimensions: [180, 220, 60],
@@ -121,36 +122,36 @@ export const products: Product[] = [
       "A soft retreat for your best nights.",
     ),
     category: "beds",
-    image: "bed",
+    image: "catalog/noa.jpg",
     price: 890,
     colors: ["#d5c9b9", "#99998c", "#555253"],
     finishNames: ["cream", "sage", "charcoal"],
     dimensions: [168, 110, 212],
     material: names(
-      "Tissu naturel, sommier inclus, matelas exclu",
-      "Natuurlijke stof, lattenbodem inbegrepen, zonder matras",
-      "Natural fabric, slatted base included, mattress excluded",
+      "Bois et panneaux laqués, rangements intégrés",
+      "Hout en gelakte panelen, ingebouwde opbergruimte",
+      "Timber and lacquered panels, built-in storage",
     ),
     badge: "bestSeller",
   },
   {
     id: "noma",
-    name: names("Armoire murale Noma", "Noma wandkast", "Noma wall cabinet"),
+    name: names("Commode Noma", "Noma ladekast", "Noma chest of drawers"),
     description: names(
       "Une place pour chaque petite chose.",
       "Een plek voor alle kleine dingen.",
       "A place for all your little things.",
     ),
     category: "storage",
-    image: "wardrobe",
+    image: "catalog/noma.jpg",
     price: 490,
     colors: ["#b49264", "#70513b"],
-    finishNames: ["woodOak", "woodWalnut"],
-    dimensions: [90, 150, 32],
+    finishNames: ["cream", "woodWalnut"],
+    dimensions: [108, 96, 50],
     material: names(
-      "Panneaux mélaminés aspect chêne",
-      "Melamine panelen met eikenlook",
-      "Oak-effect melamine panels",
+      "Bois peint, trois tiroirs",
+      "Gelakt hout, drie laden",
+      "Painted timber, three drawers",
     ),
   },
   {
@@ -162,7 +163,7 @@ export const products: Product[] = [
       "Generous seating with a quiet spirit.",
     ),
     category: "sofas",
-    image: "interior",
+    image: "catalog/soren.jpg",
     price: 1590,
     colors: ["#d9d1c6", "#8d947d"],
     finishNames: ["cream", "sage"],
@@ -182,7 +183,7 @@ export const products: Product[] = [
       "A little space for your best ideas.",
     ),
     category: "tables",
-    image: "table",
+    image: "catalog/line.jpg",
     price: 320,
     colors: ["#ddd8ca", "#b49264"],
     finishNames: ["cream", "woodOak"],
@@ -202,7 +203,7 @@ export const products: Product[] = [
       "A delicate classic with a softer side.",
     ),
     category: "chairs",
-    image: "chair",
+    image: "catalog/elo.jpg",
     price: 245,
     colors: ["#e7e3d7", "#b6a28b"],
     finishNames: ["cream", "natural"],
@@ -222,36 +223,32 @@ export const products: Product[] = [
       "Quiet nights and brighter mornings.",
     ),
     category: "beds",
-    image: "bedroom",
+    image: "catalog/lune.jpg",
     price: 1090,
     colors: ["#ddd3c5", "#b49264"],
-    finishNames: ["cream", "woodOak"],
+    finishNames: ["woodWalnut", "woodOak"],
     dimensions: [188, 105, 215],
     material: names(
-      "Chêne plaqué, tête de lit textile",
-      "Eikenfineer, stoffen hoofdbord",
-      "Oak veneer, upholstered headboard",
+      "Bois teinté, tête de lit en bois",
+      "Gebeitst hout, houten hoofdbord",
+      "Stained timber, wooden headboard",
     ),
     badge: "new",
   },
   {
     id: "forma",
-    name: names(
-      "Composition murale Forma",
-      "Forma wandmeubel",
-      "Forma wall unit",
-    ),
+    name: names("Bibliothèque Forma", "Forma boekenkast", "Forma bookcase"),
     description: names(
       "Vos objets préférés, à la bonne place.",
       "Je favoriete voorwerpen op hun plek.",
       "Your favourite objects, beautifully at home.",
     ),
     category: "storage",
-    image: "shelves",
+    image: "catalog/forma.jpg",
     price: 425,
     colors: ["#ae855b", "#e6dfd1", "#454542"],
-    finishNames: ["woodOak", "cream", "charcoal"],
-    dimensions: [220, 130, 30],
+    finishNames: ["cream", "woodOak", "charcoal"],
+    dimensions: [90, 197, 37],
     material: names(
       "Bois plaqué et panneaux laqués",
       "Houtfineer en gelakte panelen",
@@ -267,7 +264,7 @@ export const products: Product[] = [
       "Simple, thoughtful storage.",
     ),
     category: "wardrobes",
-    image: "brume",
+    image: "catalog/brume.png",
     price: 990,
     colors: ["#9aa18c", "#e8e1d1"],
     finishNames: ["sage", "cream"],
@@ -282,8 +279,7 @@ export const products: Product[] = [
 export const featured = products.slice(0, 4);
 
 export const imageUrl = (image: string) =>
-  `/images/${image}.${["atelier", "brume"].includes(image) ? "png" : "jpg"}`;
-
+  `/images/${/\.(png|jpg|jpeg|webp)$/i.test(image) ? image : image + ".jpg"}`;
 export const unitPrice = (product: Product, finish = 0) =>
   product.custom
     ? configurationPrice({

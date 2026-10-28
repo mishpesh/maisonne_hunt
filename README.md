@@ -26,7 +26,7 @@ No environment variables, API keys or backend are required. Production hosting s
 - `/` — editorial homepage, six furniture categories, bestsellers and 3D studio preview.
 - `/collection` — twelve products, category filters, sorting and multilingual search. Supports `?category=sofas` and `?q=alba`.
 - `/product/atelier` — customisable wardrobe with live 3D product preview. The selected wood finish carries into the configurator.
-- `/atelier` — the parametric wardrobe studio. Try resizing the cabinet, changing sections and shelves, wood finishes, cabinet and door colours, and opening the doors. Drag to rotate, scroll/pinch to zoom, or use the preview buttons. Reset restores the standard model.
+- `/atelier` — the parametric wardrobe studio. Try resizing the cabinet, changing individual sections between shelves, hanging rails, drawers and combined storage; choosing wood finishes, independent cabinet and door colours, handles and a back panel; and opening the hinged doors. Drag to rotate, scroll/pinch to zoom, or use the preview buttons. Use three layout presets, undo/redo, save and restore a versioned project in this browser, or export a clean PNG preview. Reset restores the standard model.
 - `/favourites` — saved product selection.
 - `/story` and `/inspiration` — supporting editorial pages.
 
@@ -39,7 +39,9 @@ Add products in different finishes and quantities; the cart supports updates, re
 - `src/pages/` — homepage, catalogue, product details and editorial pages.
 - `src/components/` — shared navigation, footer, product cards, modal, cart, assistant and configurator.
 - `src/components/WardrobePreview.tsx` — actual procedural Three.js model, generated wood textures, lights, shadows, hinged doors and camera controls.
-- `src/configuration.ts` — typed wardrobe state, panel dimensions and mock pricing.
+- `src/configuration.ts` — typed per-section wardrobe state, shared panel/shelf/drawer geometry, presets, save validation and mock pricing.
+- `src/useConfiguration.ts` — bounded, immutable undo/redo history.
+- `src/studio.css` and `src/studio-i18n.ts` — responsive studio layout and translated controls.
 - `src/data.ts` — local catalogue, image mapping, multilingual search and variant pricing.
 - `src/i18n.ts` — complete, type-checked FR / NL / EN dictionaries and Belgian EUR formatting.
 - `src/store.tsx` — shared language, favourites, cart and overlay state.
@@ -49,13 +51,13 @@ The wardrobe uses centimetres in the UI and metres internally. Panel thickness, 
 
 ## Demo boundaries
 
-MAISONNE and the catalogue are fictional. All prices, delivery estimates, return conditions and quotes are illustrative. Payments, orders, newsletter subscriptions and quote submissions are simulated. Form values and assistant messages are held only in memory and are not sent to a server. Language, favourites and cart are saved in the browser’s local storage. There is no live AI connection.
+MAISONNE and the catalogue are fictional. All prices, delivery estimates, return conditions and quotes are illustrative. Payments, orders, newsletter subscriptions and quote submissions are simulated. Form values and assistant messages are held only in memory and are not sent to a server. Language, favourites, cart and explicitly saved studio projects are saved in the browser’s local storage. There is no live AI connection.
 
 The 3D view requires a browser with WebGL and hardware acceleration; an explanatory fallback is included. Photography is bundled locally; Jost is loaded from Google Fonts, with local font fallbacks.
 
 ## Image sources
 
-The local JPG assets are sourced from Unsplash. The photo IDs below identify their original sources at `https://images.unsplash.com/<photo-id>`. Product names and specifications are fictional demo content, rather than claims about the photographed manufacturers.
+Product photographs now use isolated IKEA catalogue photos and two existing isolated chair photos, documented in [IMAGE_SOURCES.md](IMAGE_SOURCES.md). The original editorial JPG assets are sourced from Unsplash. The photo IDs below identify their original sources at `https://images.unsplash.com/<photo-id>`. Product names and specifications are fictional demo content, rather than claims about the photographed manufacturers.
 
 | Asset | Photo ID |
 | --- | --- |
@@ -71,7 +73,7 @@ The local JPG assets are sourced from Unsplash. The photo IDs below identify the
 | Bedroom | photo-1616594039964-ae9021a400a0 |
 | Wall storage | photo-1594026112284-02bb6f3352fe |
 
-`atelier.png` and `brume.png` were captured from this application's real parametric model so the wardrobe catalogue imagery matches the interactive model.
+`catalog/atelier.png` and `catalog/brume.png` were captured from this application's real parametric model so the wardrobe catalogue imagery matches the interactive model.
 
 ## Sites hosting
 

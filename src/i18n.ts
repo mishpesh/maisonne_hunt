@@ -1,5 +1,7 @@
+import { studioTranslations } from "./studio-i18n";
 export type Language = "fr" | "nl" | "en";
 const fr = {
+  ...studioTranslations.fr,
   journal: "LE JOURNAL MAISONNE",
   collection: "La collection",
   custom: "Le sur-mesure",
@@ -224,6 +226,7 @@ const fr = {
   favouritesEmpty: "Gardez vos coups de cœur à portée de main.",
 };
 const en: Record<keyof typeof fr, string> = {
+  ...studioTranslations.en,
   journal: "THE MAISONNE JOURNAL",
   collection: "The collection",
   custom: "Made for you",
@@ -446,6 +449,7 @@ const en: Record<keyof typeof fr, string> = {
   favouritesEmpty: "Keep your favourites close to hand.",
 };
 const nl: Record<keyof typeof fr, string> = {
+  ...studioTranslations.nl,
   journal: "HET MAISONNE JOURNAAL",
   collection: "De collectie",
   custom: "Op jouw maat",

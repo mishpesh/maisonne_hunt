@@ -106,14 +106,14 @@ html {
   margin-inline: auto;
 }
 .eyebrow {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 1.9px;
   line-height: 1.6;
   text-transform: uppercase;
 }
 .small {
-  font-size: 12px;
+  font-size: 16px;
 }
 .muted {
   color: #777;
@@ -159,7 +159,7 @@ html {
   padding: 16px 22px;
   min-height: 52px;
   border-radius: 2px;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 450;
   transition:
     background 0.2s,
@@ -187,7 +187,7 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 13px;
-  font-size: 12px;
+  font-size: 16px;
   white-space: nowrap;
 }
 .text-link.underlined {
@@ -217,14 +217,14 @@ html {
   position: relative;
 }
 .wordmark > span {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0;
   position: absolute;
   top: 1px;
   right: -11px;
 }
 .brand-promise {
-  font-size: 11px;
+  font-size: 15px;
   color: #b9bab5;
   letter-spacing: 0.4px;
   margin-left: 50px;
@@ -238,7 +238,7 @@ html {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 10px;
+  font-size: 14px;
   color: #c8cac4;
 }
 .language-switch {
@@ -249,7 +249,7 @@ html {
   padding-left: 22px;
 }
 .language-switch button {
-  font-size: 10px;
+  font-size: 14px;
   color: #979b94;
   padding: 6px 0;
   border-bottom: 1px solid transparent;
@@ -274,7 +274,7 @@ html {
   gap: 34px;
 }
 .navigation-inner nav > a {
-  font-size: 12px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -286,7 +286,7 @@ html {
   text-underline-offset: 7px;
 }
 .mini-tag {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.5px;
   padding: 1px 4px;
   border: 1px solid #b4b4ae;
@@ -301,7 +301,7 @@ html {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 11px;
+  font-size: 15px;
   color: #7e817b;
   border-right: 1px solid #ddd;
   padding: 0 25px 0 0;
@@ -317,7 +317,7 @@ html {
   position: absolute;
   right: -2px;
   top: -2px;
-  font-size: 9px;
+  font-size: 13px;
 }
 .cart-trigger {
   display: flex;
@@ -326,7 +326,7 @@ html {
   padding: 7px 0 7px 6px;
 }
 .cart-count {
-  font-size: 11px;
+  font-size: 15px;
 }
 .mobile-menu-toggle,
 .mobile-nav {
@@ -340,7 +340,7 @@ html {
   justify-content: center;
   gap: 25px;
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.2px;
   padding: 8px 25px;
 }
@@ -351,7 +351,7 @@ html {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: 14px;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -372,7 +372,7 @@ html {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 1.6px;
 }
 .tiny-square {
@@ -393,7 +393,7 @@ html {
   white-space: nowrap;
 }
 .hero-description {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.75;
   max-width: 340px;
   color: #72736c;
@@ -413,7 +413,7 @@ html {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 11px;
+  font-size: 15px;
 }
 .hero-secondary > svg:first-child {
   color: #71756b;
@@ -426,8 +426,8 @@ html {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #8a8b80;
-  font-size: 9px;
+  color: #686b61;
+  font-size: 13px;
   letter-spacing: 0.2px;
 }
 .signature-line {
@@ -460,12 +460,12 @@ html {
   padding: 15px 18px;
 }
 .hero-image-caption .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 1.5px;
   color: #85867a;
 }
 .hero-image-caption p {
-  font-size: 13px;
+  font-size: 17px;
   margin-top: 3px;
 }
 .round-link {
@@ -527,7 +527,7 @@ html {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-size: 10px;
+  font-size: 14px;
   color: #727369;
 }
 .trust-line > span svg {
@@ -545,17 +545,17 @@ html {
   margin-bottom: 29px;
 }
 .section-heading .eyebrow {
-  color: #7f8074;
+  color: #686b61;
   margin-bottom: 11px;
-  font-size: 9px;
+  font-size: 13px;
 }
 .section-heading h2 {
   font-size: 35px;
   line-height: 1.2;
 }
 .section-heading .section-description {
-  font-size: 13px;
-  color: #848477;
+  font-size: 17px;
+  color: #686b61;
   margin-top: 9px;
 }
 .categories-section {
@@ -584,7 +584,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 400;
   margin-top: 13px;
   gap: 7px;
@@ -593,8 +593,8 @@ html {
   width: 14px;
 }
 .category-card > small {
-  font-size: 9px;
-  color: #929285;
+  font-size: 13px;
+  color: #686b61;
   display: block;
   margin-top: 5px;
 }
@@ -637,7 +637,7 @@ html {
   display: inline-block;
   background: #fffdf5e8;
   padding: 5px 8px;
-  font-size: 8px;
+  font-size: 12px;
   color: #735c36;
   letter-spacing: 0.3px;
   z-index: 1;
@@ -668,7 +668,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 11px 12px;
-  font-size: 11px;
+  font-size: 15px;
   transform: translateY(160%);
   transition: transform 0.25s;
 }
@@ -684,34 +684,34 @@ html {
   margin-top: 15px;
 }
 .product-info h3 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.1px;
 }
 .product-info p {
-  font-size: 10px;
-  color: #8c8b80;
+  font-size: 14px;
+  color: #686b61;
   margin-top: 3px;
 }
 .price {
   color: var(--blue);
-  font-size: 16px;
+  font-size: 18px;
   white-space: nowrap;
   font-weight: 400;
 }
 .product-info .price {
-  font-size: 14px;
+  font-size: 18px;
   padding-top: 2px;
 }
 .price small {
-  font-size: 9px;
+  font-size: 13px;
 }
 .product-info .price small {
   display: block;
   text-align: right;
   margin-bottom: 2px;
-  font-size: 8px;
-  color: #929285;
+  font-size: 12px;
+  color: #686b61;
 }
 .card-swatches {
   display: flex;
@@ -727,8 +727,8 @@ html {
   border: 1px solid #0000000b;
 }
 .card-swatches > small {
-  font-size: 8px;
-  color: #8a8a7e;
+  font-size: 12px;
+  color: #686b61;
   margin-left: 5px;
 }
 .custom-promo {
@@ -741,7 +741,7 @@ html {
   padding-top: 22px;
 }
 .custom-promo-copy > .eyebrow {
-  font-size: 9px;
+  font-size: 13px;
   color: #7c7e6f;
 }
 .custom-promo h2 {
@@ -753,7 +753,7 @@ html {
   letter-spacing: -1.6px;
 }
 .custom-promo-copy > p {
-  font-size: 14px;
+  font-size: 18px;
   color: #7b7d71;
   max-width: 350px;
 }
@@ -768,14 +768,14 @@ html {
 .custom-promo li {
   display: flex;
   gap: 10px;
-  font-size: 11px;
+  font-size: 15px;
   align-items: center;
 }
 .custom-promo li svg {
   color: #78865f;
 }
 .custom-promo .button {
-  font-size: 12px;
+  font-size: 16px;
 }
 .custom-promo-image {
   position: relative;
@@ -800,14 +800,14 @@ html {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 1px;
 }
 .live-tag {
   margin-left: auto;
   border: 1px solid #aaa99c;
   padding: 3px 6px;
-  font-size: 9px;
+  font-size: 13px;
 }
 .studio-image-footer {
   position: absolute;
@@ -819,7 +819,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 14px;
   color: #74796a;
 }
 .studio-image-footer > a {
@@ -835,7 +835,7 @@ html {
   flex-direction: column;
   pointer-events: none;
   color: #747365;
-  font-size: 9px;
+  font-size: 13px;
 }
 .promo-dimension > span:last-child {
   width: 100%;
@@ -874,13 +874,13 @@ html {
   color: #6c735f;
 }
 .benefit-grid h3 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 17px;
   margin-bottom: 8px;
 }
 .benefit-grid p {
-  font-size: 11px;
+  font-size: 15px;
   color: #828375;
   line-height: 1.75;
   max-width: 220px;
@@ -895,7 +895,7 @@ html {
   gap: 60px;
 }
 .newsletter .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   color: #929083;
 }
 .newsletter h2 {
@@ -903,8 +903,8 @@ html {
   margin-top: 9px;
 }
 .newsletter p {
-  font-size: 11px;
-  color: #848475;
+  font-size: 15px;
+  color: #686b61;
   margin-top: 7px;
 }
 .newsletter-form-wrap {
@@ -923,22 +923,22 @@ html {
   outline: none;
   flex: 1;
   width: 50%;
-  font-size: 11px;
+  font-size: 15px;
 }
 .newsletter form button {
   display: flex;
   gap: 20px;
   align-items: center;
-  font-size: 11px;
+  font-size: 15px;
 }
 .newsletter-form-wrap > small {
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   color: #999889;
   margin-top: 10px;
 }
 .newsletter-success {
-  font-size: 13px;
+  font-size: 17px;
   display: flex;
   gap: 10px;
   color: #546444;
@@ -960,7 +960,7 @@ footer {
 .footer-brand > p {
   white-space: pre-line;
   color: #9da393;
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 18px;
   line-height: 1.7;
 }
@@ -969,7 +969,7 @@ footer {
   align-items: center;
   gap: 9px;
   color: #9ba18f;
-  font-size: 9px;
+  font-size: 13px;
   margin-top: 21px;
 }
 .flag-be {
@@ -985,14 +985,14 @@ footer {
   );
 }
 .footer-main h3 {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 18px;
 }
 .footer-main > div:not(:first-child) > a,
 .footer-main > div:not(:first-child) > button {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   color: #9da393;
   padding: 0;
   margin-bottom: 10px;
@@ -1003,7 +1003,7 @@ footer {
   color: white;
 }
 .footer-note p {
-  font-size: 11px;
+  font-size: 15px;
   color: #9da393;
 }
 .footer-note svg {
@@ -1017,7 +1017,7 @@ footer {
   gap: 25px;
   align-items: center;
   border-top: 1px solid #3b4035;
-  font-size: 8px;
+  font-size: 12px;
   color: #818977;
 }
 .footer-bottom > span:last-child {
@@ -1031,7 +1031,7 @@ footer {
   display: flex;
   gap: 10px;
   align-items: center;
-  font-size: 10px;
+  font-size: 14px;
   color: #969286;
   padding-top: 24px;
   padding-bottom: 32px;
@@ -1043,8 +1043,8 @@ footer {
   padding: 15px 0 38px;
 }
 .catalog-heading > .eyebrow {
-  font-size: 9px;
-  color: #8b897b;
+  font-size: 13px;
+  color: #686b61;
 }
 .catalog-heading h1 {
   font-size: 52px;
@@ -1052,8 +1052,8 @@ footer {
   line-height: 1.2;
 }
 .catalog-heading > p:last-child {
-  font-size: 14px;
-  color: #898678;
+  font-size: 18px;
+  color: #686b61;
   margin-top: 14px;
 }
 .catalog-toolbar {
@@ -1072,7 +1072,7 @@ footer {
 }
 .filter-tabs button {
   padding: 8px 12px;
-  font-size: 11px;
+  font-size: 15px;
   border: 1px solid transparent;
   border-radius: 2px;
   white-space: nowrap;
@@ -1090,7 +1090,7 @@ footer {
   flex-shrink: 0;
 }
 .sort-select select {
-  font-size: 11px;
+  font-size: 15px;
   border: 0;
   background: none;
   appearance: none;
@@ -1104,8 +1104,8 @@ footer {
   pointer-events: none;
 }
 .catalog-count {
-  font-size: 10px;
-  color: #969080;
+  font-size: 14px;
+  color: #686b61;
   padding-block: 20px;
 }
 .catalog-grid {
@@ -1114,7 +1114,7 @@ footer {
 .query-chip {
   display: inline-flex;
   gap: 15px;
-  font-size: 12px;
+  font-size: 16px;
   align-items: center;
   background: #eee9da;
   padding: 2px 5px 2px 13px;
@@ -1169,14 +1169,14 @@ footer {
   position: absolute;
   bottom: 3px;
   right: 5px;
-  font-size: 8px;
+  font-size: 12px;
 }
 .product-purchase {
   padding-top: 10px;
 }
 .product-purchase > .eyebrow {
-  font-size: 9px;
-  color: #969182;
+  font-size: 13px;
+  color: #686b61;
 }
 .product-purchase h1 {
   font-size: 43px;
@@ -1184,7 +1184,7 @@ footer {
   line-height: 1.2;
 }
 .product-short {
-  font-size: 14px;
+  font-size: 18px;
   color: #858372;
   margin-top: 13px;
 }
@@ -1200,23 +1200,23 @@ footer {
   font-size: 26px;
 }
 .product-price-row > small {
-  font-size: 10px;
+  font-size: 14px;
   color: #979280;
 }
 .product-price-row .price small {
-  font-size: 12px;
+  font-size: 16px;
 }
 .product-finish {
   margin: 23px 0;
 }
 .product-finish label {
-  font-size: 12px;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
 }
 .product-finish label > span {
-  font-size: 11px;
-  color: #928b79;
+  font-size: 15px;
+  color: #686b61;
 }
 .finish-options {
   display: flex;
@@ -1242,14 +1242,14 @@ footer {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-size: 12px;
+  font-size: 16px;
   color: #6d7061;
   margin-bottom: 27px;
 }
 .dimension-summary > small {
   margin-left: auto;
-  font-size: 8px;
-  color: #a09b88;
+  font-size: 12px;
+  color: #686b61;
 }
 .add-cart-row {
   display: flex;
@@ -1277,7 +1277,7 @@ footer {
 .quantity > output {
   min-width: 25px;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
 }
 .add-cart-row > .quantity > button {
   height: 49px;
@@ -1287,7 +1287,7 @@ footer {
   margin-top: 10px;
 }
 .save-product {
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 16px;
   margin-bottom: 22px;
 }
@@ -1302,7 +1302,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 11px;
+  font-size: 15px;
   color: #7e7d6d;
 }
 .status-dot {
@@ -1319,20 +1319,20 @@ footer {
 }
 .product-purchase summary {
   cursor: pointer;
-  font-size: 13px;
+  font-size: 17px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 }
 .product-purchase details > p {
-  font-size: 12px;
-  color: #8b8473;
+  font-size: 16px;
+  color: #686b61;
   margin-top: 17px;
 }
 .product-purchase dl {
   margin-top: 16px;
-  font-size: 11px;
+  font-size: 15px;
 }
 .product-purchase dl > div {
   display: grid;
@@ -1342,7 +1342,7 @@ footer {
   border-top: 1px solid var(--border);
 }
 .product-purchase dt {
-  color: #928b79;
+  color: #686b61;
 }
 .product-purchase dd {
   margin: 0;
@@ -1359,8 +1359,8 @@ footer {
   padding: 15px 0 40px;
 }
 .editorial-heading .eyebrow {
-  color: #8b897b;
-  font-size: 9px;
+  color: #686b61;
+  font-size: 13px;
 }
 .editorial-heading h1 {
   font-size: 58px;
@@ -1368,8 +1368,8 @@ footer {
   margin: 18px 0 23px;
 }
 .editorial-heading > p {
-  font-size: 16px;
-  color: #858171;
+  font-size: 18px;
+  color: #686b61;
   max-width: 600px;
 }
 .story-image {
@@ -1386,8 +1386,8 @@ footer {
   font-size: 36px;
 }
 .story-bottom p {
-  font-size: 15px;
-  color: #858171;
+  font-size: 18px;
+  color: #686b61;
   margin-bottom: 25px;
 }
 .inspiration-grid {
@@ -1401,8 +1401,8 @@ footer {
   margin-bottom: 20px;
 }
 .inspiration-grid .eyebrow {
-  font-size: 9px;
-  color: #8c887b;
+  font-size: 13px;
+  color: #686b61;
 }
 .inspiration-grid h2 {
   display: flex;
@@ -1451,7 +1451,7 @@ footer {
   margin: -6px -8px 0 0;
 }
 .modal > p {
-  font-size: 13px;
+  font-size: 17px;
 }
 .info-body {
   line-height: 1.8;
@@ -1471,7 +1471,7 @@ footer {
   border: 0;
   background: none;
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   outline: none;
 }
 .search-results {
@@ -1492,20 +1492,20 @@ footer {
 }
 .search-results > a > div {
   flex: 1;
-  font-size: 14px;
+  font-size: 18px;
 }
 .search-results small {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   color: #99917f;
   margin-top: 5px;
 }
 .search-results .price {
-  font-size: 14px;
+  font-size: 18px;
 }
 .empty-search {
   padding-block: 30px;
-  font-size: 13px;
+  font-size: 17px;
 }
 .drawer-backdrop {
   justify-content: flex-end;
@@ -1548,11 +1548,11 @@ footer {
   flex: 1;
 }
 .cart-item h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
 }
 .cart-item p {
-  font-size: 11px;
+  font-size: 15px;
   color: #8e8573;
   margin-top: 6px;
   margin-bottom: 13px;
@@ -1568,7 +1568,7 @@ footer {
   justify-content: space-between;
 }
 .cart-item-end > .price {
-  font-size: 15px;
+  font-size: 18px;
 }
 .cart-item-end > .icon-button {
   margin-right: -8px;
@@ -1581,7 +1581,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 13px;
 }
 .cart-summary .cart-total {
@@ -1594,9 +1594,9 @@ footer {
   margin-bottom: 15px;
 }
 .demo-note {
-  font-size: 9px;
+  font-size: 13px;
   line-height: 1.65;
-  color: #8b8573;
+  color: #686b61;
   text-align: center;
   margin-top: 13px;
 }
@@ -1615,7 +1615,7 @@ footer {
   font-size: 26px;
 }
 .empty-state > p {
-  font-size: 13px;
+  font-size: 17px;
   color: #928674;
   max-width: 330px;
 }
@@ -1644,7 +1644,7 @@ footer {
   align-items: center;
   gap: 11px;
   z-index: 70;
-  font-size: 11px;
+  font-size: 15px;
   border-radius: 3px;
   border: 1px solid #6c745d;
   box-shadow: 0 3px 14px #00000010;
@@ -1693,12 +1693,12 @@ footer {
   flex: 1;
 }
 .assistant-heading h2 {
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0;
   font-weight: 400;
 }
 .assistant-heading small {
-  font-size: 8px;
+  font-size: 12px;
   color: #b6bca6;
 }
 .assistant-symbol {
@@ -1726,7 +1726,7 @@ footer {
 }
 .chat-date {
   align-self: center;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #97947e;
@@ -1734,7 +1734,7 @@ footer {
 }
 .message {
   padding: 12px;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.8;
   max-width: 91%;
   white-space: pre-wrap;
@@ -1768,7 +1768,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 14px;
   text-align: left;
 }
 .suggestions > button:hover {
@@ -1782,7 +1782,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
+  font-size: 14px;
   color: #6b7955;
   background: #f0eedf;
   padding: 11px 18px;
@@ -1801,7 +1801,7 @@ footer {
   flex: 1;
   width: 100%;
   background: none;
-  font-size: 11px;
+  font-size: 15px;
 }
 .chat-input > button {
   display: flex;
@@ -1825,7 +1825,7 @@ footer {
   padding: 13px 22px;
   background: #293322;
   color: #fffaf0;
-  font-size: 12px;
+  font-size: 16px;
   border: 1px solid #758364;
   border-radius: 3px;
   white-space: nowrap;
@@ -1843,10 +1843,10 @@ footer {
 }
 .config-top > .eyebrow {
   color: #8d8b78;
-  font-size: 9px;
+  font-size: 13px;
 }
 .config-top > .text-link {
-  font-size: 10px;
+  font-size: 14px;
 }
 .config-title {
   text-align: center;
@@ -1854,7 +1854,7 @@ footer {
 }
 .config-title > .eyebrow {
   color: #8c8b78;
-  font-size: 8px;
+  font-size: 12px;
 }
 .config-title h1 {
   font-size: 43px;
@@ -1863,7 +1863,7 @@ footer {
   letter-spacing: -1.3px;
 }
 .config-title > p {
-  font-size: 12px;
+  font-size: 16px;
   color: #8d8874;
   margin-top: 12px;
 }
@@ -1894,7 +1894,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 1px;
   color: #7e806e;
 }
@@ -1916,7 +1916,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  font-size: 9px;
+  font-size: 13px;
   color: #868674;
 }
 .view-bottom > div {
@@ -1933,7 +1933,7 @@ footer {
   position: absolute;
   bottom: 61px;
   right: 24px;
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 3px;
   color: #bdbeac;
   pointer-events: none;
@@ -1955,7 +1955,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 450;
   letter-spacing: 0.2px;
   margin-bottom: 21px;
@@ -1972,13 +1972,13 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 15px;
 }
 .range-label output {
-  font-size: 12px;
+  font-size: 16px;
 }
 .range-label output > small {
-  font-size: 9px;
+  font-size: 13px;
   color: #aaa38d;
 }
 .range-label input {
@@ -2013,13 +2013,13 @@ footer {
   color: #aaa38d;
 }
 .range-bounds > small {
-  font-size: 8px;
+  font-size: 12px;
 }
 .control-counter {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 14px;
   margin-block: 12px;
 }
 .control-counter .quantity > button {
@@ -2027,7 +2027,7 @@ footer {
   height: 27px;
 }
 .control-counter output {
-  font-size: 11px;
+  font-size: 15px;
   min-width: 22px;
 }
 .toggle-row {
@@ -2035,7 +2035,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 18px;
   cursor: pointer;
 }
@@ -2076,14 +2076,14 @@ footer {
   outline-offset: 3px;
 }
 .swatch-label {
-  font-size: 10px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
 }
 .swatch-label > small {
-  font-size: 9px;
+  font-size: 13px;
   color: #97917c;
 }
 .wood-options {
@@ -2128,27 +2128,27 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 15px;
 }
 .estimate strong {
   font-size: 26px;
   font-weight: 400;
 }
 .config-summary {
-  font-size: 9px;
+  font-size: 13px;
   color: #918b76;
   line-height: 1.8;
   margin-top: 8px;
   margin-bottom: 19px;
 }
 .estimate .button {
-  font-size: 11px;
+  font-size: 15px;
   padding: 14px 16px;
   justify-content: space-between;
   min-height: 47px;
 }
 .estimate .demo-note {
-  font-size: 8px;
+  font-size: 12px;
   margin-top: 12px;
 }
 .options-toggle {
@@ -2163,11 +2163,11 @@ footer {
   position: relative;
 }
 .quote-configuration .eyebrow {
-  font-size: 9px;
+  font-size: 13px;
 }
 .quote-configuration p {
-  font-size: 11px;
-  color: #8c846e;
+  font-size: 15px;
+  color: #686b61;
   margin-top: 6px;
   padding-right: 70px;
 }
@@ -2183,7 +2183,7 @@ footer {
   gap: 16px;
 }
 .quote-form > label {
-  font-size: 11px;
+  font-size: 15px;
   display: block;
 }
 .quote-form input,
@@ -2195,7 +2195,7 @@ footer {
   padding: 11px;
   margin-top: 7px;
   resize: vertical;
-  font-size: 13px;
+  font-size: 17px;
 }
 .quote-form label > small {
   color: #a49a83;
@@ -2212,8 +2212,8 @@ footer {
   padding: 20px 0;
 }
 .quote-success > p {
-  font-size: 14px;
-  color: #8c846e;
+  font-size: 18px;
+  color: #686b61;
 }
 .render-loading,
 .page-loading {
@@ -2223,7 +2223,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 4px;
   color: #9b9c89;
 }
@@ -2245,7 +2245,7 @@ footer {
   justify-content: center;
   text-align: center;
   padding: 40px;
-  font-size: 13px;
+  font-size: 17px;
   color: #96917b;
 }
 .page-loading {
@@ -2283,7 +2283,7 @@ footer {
     font-size: 76px;
   }
   .hero-description {
-    font-size: 16px;
+    font-size: 18px;
   }
   .hero-signature {
     margin-top: 70px;
@@ -2306,7 +2306,7 @@ footer {
     gap: 23px;
   }
   .navigation-inner nav > a {
-    font-size: 11px;
+    font-size: 15px;
   }
   .search-trigger {
     padding-right: 17px;
@@ -2329,11 +2329,11 @@ footer {
     padding-top: 47px;
   }
   .hero-signature {
-    font-size: 8px;
+    font-size: 12px;
     margin-top: 45px;
   }
   .hero-description {
-    font-size: 14px;
+    font-size: 18px;
     max-width: 300px;
   }
   .category-grid {
@@ -2346,10 +2346,10 @@ footer {
     height: 246px;
   }
   .product-info h3 {
-    font-size: 13px;
+    font-size: 17px;
   }
   .product-info .price {
-    font-size: 12px;
+    font-size: 16px;
   }
   .custom-promo {
     gap: 50px;
@@ -2397,7 +2397,7 @@ footer {
   }
   .filter-tabs button {
     padding-inline: 9px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .config-title h1 {
     font-size: 39px;
@@ -2423,7 +2423,7 @@ footer {
     gap: 10px;
   }
   .navigation-inner nav > a {
-    font-size: 11px;
+    font-size: 15px;
   }
   .navigation-inner {
     height: 59px;
@@ -2442,12 +2442,12 @@ footer {
     margin-top: 26px;
   }
   .hero-description {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.8;
     max-width: 270px;
   }
   .hero-copy .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 1.2px;
   }
   .hero-visual {
@@ -2456,17 +2456,17 @@ footer {
   .hero .button {
     padding: 15px 16px;
     min-width: 210px;
-    font-size: 11px;
+    font-size: 15px;
     gap: 18px;
   }
   .hero-secondary {
-    font-size: 10px;
+    font-size: 14px;
     gap: 7px;
     margin-top: 19px;
   }
   .hero-signature {
     margin-top: 37px;
-    font-size: 7px;
+    font-size: 11px;
     gap: 5px;
   }
   .signature-line {
@@ -2479,7 +2479,7 @@ footer {
     padding: 13px;
   }
   .hero-image-caption p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero-image-caption .round-link {
     width: 29px;
@@ -2489,7 +2489,7 @@ footer {
     width: 17px;
   }
   .trust-line > span {
-    font-size: 8px;
+    font-size: 12px;
     gap: 8px;
   }
   .trust-line > a {
@@ -2514,16 +2514,16 @@ footer {
     height: 340px;
   }
   .product-info h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .product-info .price {
-    font-size: 15px;
+    font-size: 18px;
   }
   .section-heading h2 {
     font-size: 31px;
   }
   .section-heading .text-link {
-    font-size: 10px;
+    font-size: 14px;
   }
   .custom-promo {
     gap: 28px;
@@ -2534,14 +2534,14 @@ footer {
     font-size: 39px;
   }
   .custom-promo-copy > p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .custom-promo li {
-    font-size: 9px;
+    font-size: 13px;
     gap: 7px;
   }
   .custom-promo .button {
-    font-size: 10px;
+    font-size: 14px;
     gap: 12px;
     padding: 14px 15px;
   }
@@ -2557,13 +2557,13 @@ footer {
   .studio-image-label {
     left: 16px;
     right: 16px;
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 0.5px;
   }
   .studio-image-footer {
     left: 16px;
     right: 16px;
-    font-size: 8px;
+    font-size: 12px;
   }
   .benefit-grid {
     gap: 20px;
@@ -2572,10 +2572,10 @@ footer {
     padding-left: 16px;
   }
   .benefit-grid h3 {
-    font-size: 13px;
+    font-size: 17px;
   }
   .benefit-grid p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .newsletter-inner {
     gap: 30px;
@@ -2587,7 +2587,7 @@ footer {
     width: 43%;
   }
   .newsletter form button {
-    font-size: 10px;
+    font-size: 14px;
     gap: 10px;
   }
   .footer-main {
@@ -2599,7 +2599,7 @@ footer {
   }
   .footer-bottom {
     flex-wrap: wrap;
-    font-size: 7px;
+    font-size: 11px;
     gap: 15px;
   }
   .footer-bottom > span:last-child {
@@ -2615,7 +2615,7 @@ footer {
     font-size: 33px;
   }
   .product-short {
-    font-size: 12px;
+    font-size: 16px;
   }
   .product-price-row > .price {
     font-size: 23px;
@@ -2624,18 +2624,18 @@ footer {
     grid-template-columns: 1fr 1.5fr;
   }
   .product-purchase dd {
-    font-size: 10px;
+    font-size: 14px;
   }
   .add-cart-row > .button {
     padding: 14px 12px;
-    font-size: 11px;
+    font-size: 15px;
     gap: 10px;
   }
   .add-cart-row > .quantity > button {
     width: 23px;
   }
   .product-purchase > .button {
-    font-size: 11px;
+    font-size: 15px;
     gap: 15px;
   }
   .config-workspace {
@@ -2654,14 +2654,14 @@ footer {
   .view-top {
     left: 15px;
     right: 15px;
-    font-size: 7px;
+    font-size: 11px;
   }
   .view-bottom {
     left: 15px;
     right: 15px;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 8px;
+    font-size: 12px;
   }
   .view-bottom > div {
     align-self: flex-end;
@@ -2675,7 +2675,7 @@ footer {
     justify-content: space-between;
   }
   .filter-tabs button {
-    font-size: 11px;
+    font-size: 15px;
   }
   .sort-select {
     margin-left: auto;
@@ -2690,7 +2690,7 @@ footer {
     height: 340px;
   }
   .inspiration-grid h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .inspiration-grid h2 svg {
     flex-shrink: 0;
@@ -2724,7 +2724,7 @@ footer {
     gap: 12px;
   }
   .language-switch button {
-    font-size: 9px;
+    font-size: 13px;
   }
   .navigation-inner {
     height: 55px;
@@ -2753,7 +2753,7 @@ footer {
     gap: 7px;
   }
   .cart-count {
-    font-size: 10px;
+    font-size: 14px;
   }
   .mobile-nav {
     display: flex;
@@ -2766,12 +2766,12 @@ footer {
   .mobile-nav > a {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 18px;
     padding: 13px 0;
     border-bottom: 1px solid #eee;
   }
   .announcement {
-    font-size: 9px;
+    font-size: 13px;
     padding: 9px 15px;
     gap: 12px;
     min-height: 34px;
@@ -2781,7 +2781,7 @@ footer {
     display: none;
   }
   .announcement > a {
-    font-size: 9px;
+    font-size: 13px;
   }
   .hero {
     grid-template-columns: 1fr;
@@ -2793,7 +2793,7 @@ footer {
     padding: 13px 4px 0;
   }
   .hero-copy .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 1.2px;
     gap: 8px;
   }
@@ -2804,24 +2804,24 @@ footer {
     letter-spacing: -2px;
   }
   .hero-description {
-    font-size: 13px;
+    font-size: 17px;
     max-width: 300px;
     margin-bottom: 24px;
   }
   .hero .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 16px 20px;
     min-height: 51px;
     min-width: 242px;
     justify-content: space-between;
   }
   .hero-secondary {
-    font-size: 10px;
+    font-size: 14px;
     margin-top: 19px;
   }
   .hero-signature {
     margin-top: 26px;
-    font-size: 8px;
+    font-size: 12px;
   }
   .hero-visual {
     height: 405px;
@@ -2837,10 +2837,10 @@ footer {
     padding: 13px 14px;
   }
   .hero-image-caption p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .hero-image-caption .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
   }
   .hero-hotspot {
     width: 29px;
@@ -2859,7 +2859,7 @@ footer {
     min-height: 0;
   }
   .trust-line > span {
-    font-size: 8px;
+    font-size: 12px;
     gap: 8px;
   }
   .trust-line > span:nth-child(2) {
@@ -2883,7 +2883,7 @@ footer {
     font-size: 28px;
   }
   .section-heading .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 1.5px;
     margin-bottom: 11px;
   }
@@ -2906,7 +2906,7 @@ footer {
     border-radius: 3px;
   }
   .category-card h3 {
-    font-size: 10px;
+    font-size: 14px;
     gap: 2px;
     margin-top: 10px;
   }
@@ -2915,14 +2915,14 @@ footer {
     height: 11px;
   }
   .category-card > small {
-    font-size: 7px;
+    font-size: 11px;
     margin-top: 4px;
   }
   .bestsellers-section {
     padding-block: 39px 42px;
   }
   .section-heading .section-description {
-    font-size: 11px;
+    font-size: 15px;
     margin-top: 8px;
   }
   .product-grid {
@@ -2933,7 +2933,7 @@ footer {
     border-radius: 3px;
   }
   .product-badge {
-    font-size: 7px;
+    font-size: 11px;
     left: 8px;
     top: 8px;
     padding: 4px 6px;
@@ -2954,18 +2954,18 @@ footer {
     flex-wrap: wrap;
   }
   .product-info h3 {
-    font-size: 12px;
+    font-size: 16px;
   }
   .product-info .price {
-    font-size: 12px;
+    font-size: 16px;
     padding-top: 0;
   }
   .product-info p {
-    font-size: 8px;
+    font-size: 12px;
     margin-top: 3px;
   }
   .product-info .price small {
-    font-size: 7px;
+    font-size: 11px;
     text-align: left;
     display: inline;
     margin-right: 3px;
@@ -2979,7 +2979,7 @@ footer {
     height: 8px;
   }
   .card-swatches > small {
-    font-size: 7px;
+    font-size: 11px;
     margin-left: 4px;
   }
   .product-reveal {
@@ -2994,7 +2994,7 @@ footer {
     padding-top: 0;
   }
   .custom-promo-copy > .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
   }
   .custom-promo h2 {
     font-size: 44px;
@@ -3002,7 +3002,7 @@ footer {
     margin-bottom: 18px;
   }
   .custom-promo-copy > p {
-    font-size: 13px;
+    font-size: 17px;
     max-width: 320px;
   }
   .custom-promo ul {
@@ -3010,10 +3010,10 @@ footer {
     margin: 20px 0 25px;
   }
   .custom-promo li {
-    font-size: 11px;
+    font-size: 15px;
   }
   .custom-promo .button {
-    font-size: 12px;
+    font-size: 16px;
     gap: 24px;
     padding: 16px 20px;
   }
@@ -3027,7 +3027,7 @@ footer {
     min-height: 420px;
   }
   .studio-image-label {
-    font-size: 8px;
+    font-size: 12px;
     top: 20px;
     left: 20px;
     right: 20px;
@@ -3035,7 +3035,7 @@ footer {
   .studio-image-footer {
     left: 20px;
     right: 20px;
-    font-size: 9px;
+    font-size: 13px;
     bottom: 16px;
   }
   .promo-dimension {
@@ -3061,12 +3061,12 @@ footer {
     height: 24px;
   }
   .benefit-grid h3 {
-    font-size: 13px;
+    font-size: 17px;
     margin-top: 12px;
     margin-bottom: 6px;
   }
   .benefit-grid p {
-    font-size: 10px;
+    font-size: 14px;
     max-width: 160px;
   }
   .newsletter {
@@ -3078,13 +3078,13 @@ footer {
     align-items: stretch;
   }
   .newsletter .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
   }
   .newsletter h2 {
     font-size: 25px;
   }
   .newsletter p {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 310px;
   }
   .newsletter-form-wrap {
@@ -3095,14 +3095,14 @@ footer {
     padding-bottom: 12px;
   }
   .newsletter form input {
-    font-size: 12px;
+    font-size: 16px;
   }
   .newsletter form button {
-    font-size: 11px;
+    font-size: 15px;
     gap: 15px;
   }
   .newsletter-form-wrap > small {
-    font-size: 7px;
+    font-size: 11px;
   }
   footer {
     padding-top: 34px;
@@ -3119,27 +3119,27 @@ footer {
     font-size: 29px;
   }
   .footer-brand > p {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 250px;
     margin-top: 14px;
   }
   .footer-belgium {
-    font-size: 8px;
+    font-size: 12px;
     margin-top: 16px;
   }
   .footer-main h3 {
-    font-size: 11px;
+    font-size: 15px;
     margin-bottom: 15px;
   }
   .footer-main > div:not(:first-child) > a,
   .footer-main > div:not(:first-child) > button {
-    font-size: 10px;
+    font-size: 14px;
   }
   .footer-bottom {
     flex-direction: column;
     gap: 9px;
     align-items: flex-start;
-    font-size: 7px;
+    font-size: 11px;
     padding-top: 17px;
     padding-bottom: 83px;
   }
@@ -3148,7 +3148,7 @@ footer {
     min-height: 600px;
   }
   .breadcrumb {
-    font-size: 9px;
+    font-size: 13px;
     gap: 7px;
     padding-top: 20px;
     padding-bottom: 25px;
@@ -3158,7 +3158,7 @@ footer {
     padding-bottom: 25px;
   }
   .catalog-heading > .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .catalog-heading h1 {
     font-size: 41px;
@@ -3166,7 +3166,7 @@ footer {
     margin-top: 13px;
   }
   .catalog-heading > p:last-child {
-    font-size: 12px;
+    font-size: 16px;
     max-width: 310px;
   }
   .catalog-toolbar {
@@ -3183,21 +3183,21 @@ footer {
     gap: 4px;
   }
   .filter-tabs > button {
-    font-size: 10px;
+    font-size: 14px;
     padding: 7px 10px;
   }
   .catalog-count {
-    font-size: 9px;
+    font-size: 13px;
     padding-block: 16px;
   }
   .sort-select select {
-    font-size: 10px;
+    font-size: 14px;
   }
   .catalog-grid {
     row-gap: 29px;
   }
   .query-chip {
-    font-size: 11px;
+    font-size: 15px;
   }
   .product-detail {
     grid-template-columns: 1fr;
@@ -3218,14 +3218,14 @@ footer {
     padding-top: 0;
   }
   .product-purchase > .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .product-purchase h1 {
     font-size: 38px;
     margin-top: 10px;
   }
   .product-short {
-    font-size: 13px;
+    font-size: 17px;
   }
   .product-price-row {
     margin-top: 17px;
@@ -3242,10 +3242,10 @@ footer {
   }
   .dimension-summary > small {
     display: block;
-    font-size: 7px;
+    font-size: 11px;
   }
   .add-cart-row > .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 15px 17px;
   }
   .add-cart-row > .quantity > button {
@@ -3253,22 +3253,22 @@ footer {
     height: 49px;
   }
   .product-purchase > .button {
-    font-size: 12px;
+    font-size: 16px;
   }
   .save-product {
-    font-size: 11px;
+    font-size: 15px;
   }
   .product-services > span {
-    font-size: 11px;
+    font-size: 15px;
   }
   .product-purchase details > p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .product-purchase dl > div {
     grid-template-columns: 1fr 2fr;
   }
   .product-purchase dd {
-    font-size: 11px;
+    font-size: 15px;
   }
   .related-products {
     padding-top: 42px;
@@ -3290,7 +3290,7 @@ footer {
     margin-bottom: 18px;
   }
   .editorial-heading > p {
-    font-size: 13px;
+    font-size: 17px;
   }
   .story-image {
     height: 350px;
@@ -3304,7 +3304,7 @@ footer {
     font-size: 28px;
   }
   .story-bottom p {
-    font-size: 13px;
+    font-size: 17px;
   }
   .inspiration-grid {
     grid-template-columns: 1fr;
@@ -3333,14 +3333,14 @@ footer {
     font-size: 25px;
   }
   .modal > p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .search-modal .modal {
     align-self: flex-start;
     margin-top: 35px;
   }
   .search-form > input {
-    font-size: 14px;
+    font-size: 18px;
   }
   .search-results > a {
     gap: 11px;
@@ -3350,10 +3350,10 @@ footer {
     height: 56px;
   }
   .search-results > a > div {
-    font-size: 12px;
+    font-size: 16px;
   }
   .search-results .price {
-    font-size: 12px;
+    font-size: 16px;
   }
   .drawer-backdrop {
     padding: 0;
@@ -3371,26 +3371,26 @@ footer {
     height: 96px;
   }
   .cart-item h3 {
-    font-size: 14px;
-  }
-  .cart-item p {
-    font-size: 10px;
-  }
-  .cart-item-end > .price {
-    font-size: 13px;
-  }
-  .cart-summary .cart-total {
     font-size: 18px;
   }
+  .cart-item p {
+    font-size: 14px;
+  }
+  .cart-item-end > .price {
+    font-size: 17px;
+  }
+  .cart-summary .cart-total {
+    font-size: 20px;
+  }
   .cart-summary > .button {
-    font-size: 12px;
+    font-size: 16px;
     gap: 15px;
   }
   .assistant-launcher {
     right: 17px;
     bottom: 16px;
     min-height: 44px;
-    font-size: 10px;
+    font-size: 14px;
     padding-inline: 13px;
     gap: 9px;
   }
@@ -3408,26 +3408,26 @@ footer {
     padding: 16px;
   }
   .assistant-heading h2 {
-    font-size: 14px;
+    font-size: 18px;
   }
   .assistant-heading small {
-    font-size: 8px;
+    font-size: 12px;
   }
   .message {
-    font-size: 12px;
+    font-size: 16px;
   }
   .suggestions > button {
-    font-size: 11px;
+    font-size: 15px;
   }
   .chat-input > input {
-    font-size: 12px;
+    font-size: 16px;
   }
   .studio-chat-link {
-    font-size: 11px;
+    font-size: 15px;
   }
   .toast {
     bottom: 76px;
-    font-size: 11px;
+    font-size: 15px;
     padding: 12px 17px;
     max-width: calc(100% - 30px);
     white-space: normal;
@@ -3440,11 +3440,11 @@ footer {
     gap: 12px;
   }
   .config-top > .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 1px;
   }
   .config-top > .text-link {
-    font-size: 9px;
+    font-size: 13px;
     gap: 6px;
   }
   .config-top > .text-link svg {
@@ -3454,7 +3454,7 @@ footer {
     padding: 26px 20px 25px;
   }
   .config-title > .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
   }
   .config-title h1 {
     font-size: 33px;
@@ -3462,7 +3462,7 @@ footer {
     margin-top: 12px;
   }
   .config-title > p {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 310px;
     margin-inline: auto;
     margin-top: 12px;
@@ -3478,7 +3478,7 @@ footer {
   }
   .view-top {
     top: 19px;
-    font-size: 8px;
+    font-size: 12px;
     left: 18px;
     right: 18px;
   }
@@ -3488,7 +3488,7 @@ footer {
     bottom: 16px;
     flex-direction: row;
     align-items: center;
-    font-size: 8px;
+    font-size: 12px;
   }
   .view-bottom > div {
     gap: 4px;
@@ -3500,7 +3500,7 @@ footer {
   .view-watermark {
     right: 18px;
     bottom: 56px;
-    font-size: 8px;
+    font-size: 12px;
   }
   .config-options {
     border-radius: 4px;
@@ -3511,7 +3511,7 @@ footer {
     width: 100%;
     padding: 17px 20px;
     border-bottom: 1px solid var(--border);
-    font-size: 12px;
+    font-size: 16px;
   }
   .config-controls {
     padding-inline: 23px;
@@ -3524,26 +3524,26 @@ footer {
     padding-block: 22px;
   }
   .control-section h2 {
-    font-size: 13px;
+    font-size: 17px;
     margin-bottom: 21px;
   }
   .range-label {
     margin-top: 18px;
   }
   .range-label > span:first-child {
-    font-size: 12px;
+    font-size: 16px;
   }
   .range-label output {
-    font-size: 13px;
+    font-size: 17px;
   }
   .range-label input {
     margin-top: 18px;
   }
   .range-bounds > small {
-    font-size: 9px;
+    font-size: 13px;
   }
   .control-counter {
-    font-size: 12px;
+    font-size: 16px;
     margin-block: 15px;
   }
   .control-counter .quantity > button {
@@ -3551,11 +3551,11 @@ footer {
     width: 32px;
   }
   .control-counter output {
-    font-size: 12px;
+    font-size: 16px;
     min-width: 27px;
   }
   .toggle-row {
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 21px;
   }
   .switch {
@@ -3575,10 +3575,10 @@ footer {
     height: 20px;
   }
   .swatch-label {
-    font-size: 12px;
+    font-size: 16px;
   }
   .swatch-label > small {
-    font-size: 10px;
+    font-size: 14px;
   }
   .wood-swatch {
     height: 47px;
@@ -3596,34 +3596,34 @@ footer {
     padding: 22px 23px;
   }
   .estimate > div {
-    font-size: 13px;
+    font-size: 17px;
   }
   .estimate strong {
     font-size: 30px;
   }
   .config-summary {
-    font-size: 10px;
+    font-size: 14px;
     margin-top: 10px;
     margin-bottom: 20px;
   }
   .estimate .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 16px 19px;
   }
   .estimate .demo-note {
-    font-size: 9px;
+    font-size: 13px;
   }
   .quote-form > label {
-    font-size: 12px;
+    font-size: 16px;
   }
   .quote-configuration p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .quote-configuration .price {
-    font-size: 18px;
+    font-size: 20px;
   }
   .quote-success > p {
-    font-size: 13px;
+    font-size: 17px;
   }
 }
 @media (max-width: 370px) {
@@ -3650,10 +3650,10 @@ footer {
     height: 105px;
   }
   .category-card h3 {
-    font-size: 9px;
+    font-size: 13px;
   }
   .view-bottom > span {
-    font-size: 7px;
+    font-size: 11px;
   }
   .view-bottom > div {
     gap: 2px;
@@ -3683,4 +3683,192 @@ footer {
   padding: 0;
   margin: 20px 0 0;
   min-width: 0;
+}
+
+/* Product imagery is always presented whole, on a clean catalogue surface. */
+.product-image {
+  background: #fff;
+}
+.product-image img {
+  object-fit: contain;
+  object-position: center !important;
+  padding: 18px;
+}
+.product-image:hover img {
+  transform: scale(1.025);
+}
+.main-product-image {
+  background: #fff;
+}
+.main-product-image > img {
+  object-fit: contain;
+  padding: 30px;
+}
+.gallery-thumbnails > button {
+  background: #fff;
+}
+.gallery-thumbnails img {
+  object-fit: contain;
+  padding: 5px;
+}
+.gallery-view-label {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #62695b;
+  pointer-events: none;
+}
+.gallery-thumbnails > button > span {
+  font-size: 11px;
+  bottom: 5px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+.category-card > div {
+  background: #fff;
+}
+.category-card img {
+  object-fit: contain;
+  object-position: center !important;
+  padding: 12px;
+}
+@media (max-width: 900px) {
+  .navigation-inner nav {
+    gap: 18px;
+  }
+  .search-trigger {
+    padding-right: 12px;
+  }
+}
+@media (max-width: 640px) {
+  .product-info {
+    display: block;
+  }
+  .product-info .price {
+    display: block;
+    margin-top: 6px;
+  }
+  .product-info .price small {
+    display: inline;
+  }
+  .product-image img {
+    padding: 10px;
+  }
+  .main-product-image > img {
+    padding: 18px;
+  }
+  .hero-description {
+    max-width: 100%;
+  }
+  .hero-signature {
+    font-size: 12px;
+  }
+  .category-card h3 {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .category-card h3 svg {
+    flex-shrink: 0;
+  }
+  .trust-line > span {
+    font-size: 12px;
+  }
+  .newsletter-form-wrap > small {
+    font-size: 12px;
+  }
+  .footer-bottom {
+    font-size: 12px;
+  }
+  .card-swatches > small {
+    font-size: 12px;
+  }
+  .gallery-thumbnails > button {
+    height: 80px;
+    width: 82px;
+  }
+}
+
+.product-image img[src$=".png"] {
+  object-fit: cover;
+  padding: 0;
+}
+
+/* Comfortable reading sizes for the retail experience. */
+body {
+  font-size: 18px;
+}
+.navigation-inner nav > a,
+.search-trigger {
+  font-size: 18px;
+}
+.product-info h3 {
+  font-size: 20px;
+  line-height: 1.35;
+}
+.product-info p,
+.card-swatches > small {
+  font-size: 16px;
+}
+.product-info .price {
+  font-size: 21px;
+}
+.product-info .price small,
+.product-badge {
+  font-size: 14px;
+}
+.product-info > div {
+  min-width: 0;
+}
+.product-short {
+  font-size: 20px;
+  color: #626454;
+}
+.product-price-row > .price {
+  font-size: 32px;
+}
+.product-price-row > small {
+  font-size: 16px;
+  color: #686b61;
+}
+.product-finish label,
+.dimension-summary {
+  font-size: 18px;
+}
+.dimension-summary > small {
+  font-size: 14px;
+}
+.gallery-thumbnails > button > span {
+  font-size: 14px;
+}
+@media (max-width: 640px) {
+  .product-info h3 {
+    font-size: 18px;
+  }
+  .product-info .price {
+    font-size: 20px;
+  }
+  .product-info p,
+  .card-swatches > small {
+    font-size: 14px;
+  }
+  .product-short {
+    font-size: 19px;
+  }
+  .product-price-row > .price {
+    font-size: 30px;
+  }
+  .category-card h3 {
+    font-size: 16px;
+  }
+  .trust-line > span,
+  .hero-signature,
+  .newsletter-form-wrap > small,
+  .footer-bottom {
+    font-size: 14px;
+  }
 }

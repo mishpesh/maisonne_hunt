@@ -17,6 +17,10 @@ function Shell() {
   const location = useLocation();
   const { pathname } = location;
   useEffect(() => {
+    document.body.classList.toggle("studio-open", pathname === "/atelier");
+    return () => document.body.classList.remove("studio-open");
+  }, [pathname]);
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
   useEffect(() => {
@@ -65,7 +69,7 @@ function Shell() {
           </motion.div>
         </AnimatePresence>
       </div>
-      <Footer />
+      {pathname !== "/atelier" && <Footer />}
       <Assistant />
       {cartOpen && <Cart />}
       <AnimatePresence>

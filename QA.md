@@ -1,31 +1,28 @@
-# Verification — 26 October 2026
+# Verification — 28 October 2026
 
 ## Automated checks
 
-- `npm run build`: passes TypeScript validation and Vite production bundling.
-- `npm test`: 8 tests pass. Covers compartment geometry across 243 supported boundary combinations, panel clearances, advertised starting price, material/dimension pricing, catalogue integrity, translation parity, multilingual accent-insensitive search and wardrobe variant prices.
-- `npm audit`: zero reported vulnerabilities after updating the test runner.
-- All 13 bundled image assets were requested successfully through the local production server and checked for valid JPEG/PNG signatures.
+- `npm run build`: TypeScript validation and Vite production bundling.
+- `npm test`: 11 passing tests. Covers physical panel/compartment bounds at supported dimensional extremes; shelf/drawer/rail clearance across layouts; independent presets; narrow-cabinet section limits; immutable undo/redo; versioned save validation; component/material pricing; advertised and cart wardrobe price consistency; 12 distinct products and valid local JPEG/PNG assets; multilingual accent-insensitive search; and FR/NL/EN translation parity.
+- Dependency installation audit reports zero vulnerabilities.
+- All 12 catalogue image elements were inspected in the browser: complete, with nonzero natural width. Wardrobe PNGs were exported from the live WebGL canvas through the application's export preview; the obsolete screenshot assets were removed.
 
-## Browser checks
+## Browser checks for this revision
 
-Tested the local application in the in-app browser at desktop and mobile viewport sizes (1280 × 720, 1280 × 900 and 390 × 844).
+Inspected in the in-app desktop browser at its default 1280 × 720 viewport and a temporary 390 × 844 mobile viewport.
 
-- Homepage, all category links, catalogue filters and ascending price sorting.
-- Search suggestions, query navigation and no-result handling.
-- Product navigation, finish selection, quantity controls and galleries.
-- Favourites, cart addition, quantity changes, removal, reload persistence and simulated checkout.
-- French, Dutch and English navigation, catalogue, controls, prices and assistant history.
-- Scripted assistant delivery answers, product materials/dimensions and the studio link.
-- Parametric wardrobe width, height, depth, sections and shelves, including extreme dimensions.
-- Cabinet wood, independent cabinet and door colours, doors on/off, animated opening, rotation, zoom and reset.
-- Selected product wood finish carries into the studio and produces the matching estimate.
-- Quote form, required fields, configuration summary and demo confirmation.
-- Mobile navigation, collapsible studio options, responsive form, and absence of horizontal overflow in the inspected views.
-- Story and inspiration pages, their imagery and navigation.
-- Simulated newsletter confirmation.
-- Final production build refreshed and inspected after its last rebuild.
+- Catalogue product photography, readable names/prices and image loading.
+- Wardrobe product gallery: perspective/front/detail controls, live material change and matching price; walnut item addition and matching cart total.
+- Dimensions: numeric editing to the 80 cm minimum automatically reduces three sections to two and disables further section additions.
+- Independent section selection and drawer count changes.
+- Layout presets, undo/redo, save/restore and reset.
+- Independent cabinet/door colours, hinged-door enablement and animated opening/closing.
+- Clean PNG export preview and saved image content.
+- Quote form configuration summary and simulated success using dummy example.com contact data; no email is sent.
+- French, Dutch and English translated studio controls.
+- Mobile sticky stage and section tabs, readable controls, absence of horizontal overflow.
+- Fresh production build inspection and published-site handoff complete the release checks.
 
-This is viewport testing in a desktop browser, not a physical-device or cross-browser certification.
+This is viewport testing in a desktop browser, not physical-device or cross-browser certification. Payments, orders and quote delivery remain simulated. The 3D preview requires WebGL.
 
 Screenshots are saved in `artifacts/`.
