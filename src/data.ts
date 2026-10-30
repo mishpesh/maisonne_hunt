@@ -7,8 +7,8 @@ export const categories: { id: Category; image: string; count: number }[] = [
   { id: "sofas", image: "catalog/alba.jpg", count: 2 },
   { id: "tables", image: "catalog/oslo.jpg", count: 2 },
   { id: "chairs", image: "catalog/milo.jpg", count: 2 },
-  { id: "beds", image: "catalog/lune.jpg", count: 2 },
-  { id: "wardrobes", image: "catalog/atelier.png", count: 2 },
+  { id: "beds", image: "catalog/lune.jpg", count: 3 },
+  { id: "wardrobes", image: "catalog/atelier.png", count: 1 },
   { id: "storage", image: "catalog/forma.jpg", count: 2 },
 ];
 export type Product = {
@@ -254,6 +254,27 @@ export const products: Product[] = [
       "Houtfineer en gelakte panelen",
       "Veneered timber and lacquered panels",
     ),
+  },
+  {
+    id: "aube",
+    name: names("Lit Aube", "Aube bed", "Aube upholstered bed"),
+    description: names(
+      "Une tête de lit douce pour des matins paisibles.",
+      "Een zacht hoofdbord voor rustige ochtenden.",
+      "A softly upholstered headboard for quieter mornings.",
+    ),
+    category: "beds",
+    image: "catalog/aube.jpg",
+    price: 1290,
+    colors: ["#777775"],
+    finishNames: ["charcoal"],
+    dimensions: [170, 121, 222],
+    material: names(
+      "Cadre rembourré, tissu tissé",
+      "Gestoffeerd frame, geweven stof",
+      "Upholstered frame, woven fabric",
+    ),
+    badge: "new",
   },
 ];
 export const featured = products.slice(0, 4);

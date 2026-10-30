@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { products } from "./data";
+import { rooms } from "./rooms";
 import { StoreProvider, useStore } from "./store";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -10,6 +11,7 @@ import { Assistant, Cart } from "./components/Overlays";
 const Catalog = lazy(() => import("./pages/Catalog"));
 const ProductPage = lazy(() => import("./pages/Product"));
 const EditorialPage = lazy(() => import("./pages/Editorial"));
+const InspirationPage = lazy(() => import("./pages/Inspiration"));
 const Configurator = lazy(() => import("./components/Configurator"));
 function Shell() {
   const { cartOpen, toast, t, lang } = useStore();
@@ -23,7 +25,23 @@ function Shell() {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
   useEffect(() => {
-    document.title = `MAISONNE — ${pathname === "/atelier" ? t("studio") : pathname.startsWith("/product/") ? products.find((p) => p.id === pathname.split("/")[2])?.name[lang] || t("collection") : pathname === "/collection" ? t("collection") : pathname === "/favourites" ? t("favourites") : pathname === "/story" ? t("story") : pathname === "/inspiration" ? t("inspiration") : t("collection")}`;
+    const product = products.find((p) => `/product/${p.id}` === pathname);
+    const room = rooms.find((r) => `/inspiration/${r.id}` === pathname);
+    const title =
+      pathname === "/atelier"
+        ? t("studio")
+        : product
+          ? product.name[lang]
+          : room
+            ? room.title[lang]
+            : pathname === "/favourites"
+              ? t("favourites")
+              : pathname === "/story"
+                ? t("story")
+                : pathname.startsWith("/inspiration")
+                  ? t("inspiration")
+                  : t("collection");
+    document.title = `MAISONNE — ${title}`;
   }, [pathname, lang, t]);
   return (
     <>
@@ -49,7 +67,10 @@ function Shell() {
               }
             >
               <Routes location={location}>
-                <Route path="/" element={<Navigate to="/collection" replace />} />
+                <Route
+                  path="/"
+                  element={<Navigate to="/collection" replace />}
+                />
                 <Route path="/collection" element={<Catalog />} />
                 <Route
                   path="/favourites"
@@ -57,12 +78,16 @@ function Shell() {
                 />
                 <Route path="/product/:id" element={<ProductPage />} />
                 <Route path="/atelier" element={<Configurator />} />
-                <Route path="/story" element={<EditorialPage type="story" />} />
+                <Route path="/story" element={<EditorialPage />} />
+                <Route path="/inspiration" element={<InspirationPage />} />
                 <Route
-                  path="/inspiration"
-                  element={<EditorialPage type="inspiration" />}
+                  path="/inspiration/:roomId"
+                  element={<InspirationPage />}
                 />
-                <Route path="*" element={<Navigate to="/collection" replace />} />
+                <Route
+                  path="*"
+                  element={<Navigate to="/collection" replace />}
+                />
               </Routes>
             </Suspense>
           </motion.div>

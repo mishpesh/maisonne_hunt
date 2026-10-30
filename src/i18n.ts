@@ -221,7 +221,7 @@ const fr = {
   contactText:
     "Découvrez les réponses à vos questions dans notre assistant. Ce site est une démonstration : aucune équipe commerciale réelle n’est connectée.",
   privacyText:
-    "Cette démonstration conserve uniquement la langue, les favoris et le panier dans le stockage local de votre navigateur. Les formulaires et messages ne sont transmis à aucun serveur. Les photos sont servies localement ; la police Jost est chargée depuis Google Fonts.",
+    "Cette démonstration conserve uniquement la langue, les favoris et le panier dans le stockage local de votre navigateur. Les formulaires et messages ne sont transmis à aucun serveur. Les photos et la police Poppins sont servies localement.",
   favouritesTitle: "Vos pièces préférées.",
   favouritesEmpty: "Gardez vos coups de cœur à portée de main.",
 };
@@ -444,7 +444,7 @@ const en: Record<keyof typeof fr, string> = {
   contactText:
     "Find answers in our assistant. This website is a demo: no real sales team is connected.",
   privacyText:
-    "This demo stores only your language, favourites and bag in your browser’s local storage. Forms and messages are never sent to a server. Photos are served locally; the Jost font loads from Google Fonts.",
+    "This demo stores only your language, favourites and bag in your browser’s local storage. Forms and messages are never sent to a server. Photos and the Poppins font are served locally.",
   favouritesTitle: "The pieces you love.",
   favouritesEmpty: "Keep your favourites close to hand.",
 };
@@ -664,7 +664,7 @@ const nl: Record<keyof typeof fr, string> = {
   contactText:
     "Vind antwoorden bij onze assistent. Deze website is een demo: er is geen echt verkoopteam verbonden.",
   privacyText:
-    "Deze demo bewaart alleen je taal, favorieten en winkelmand lokaal in je browser. Formulieren en berichten worden nooit naar een server gestuurd. Foto’s worden lokaal geladen; het lettertype Jost komt van Google Fonts.",
+    "Deze demo bewaart alleen je taal, favorieten en winkelmand lokaal in je browser. Formulieren en berichten worden nooit naar een server gestuurd. Foto’s en het lettertype Poppins worden lokaal geladen.",
   favouritesTitle: "Jouw favoriete meubels.",
   favouritesEmpty: "Bewaar je favorieten binnen handbereik.",
 };

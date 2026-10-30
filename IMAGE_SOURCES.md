@@ -18,3 +18,5 @@ Updated 28 October 2026. MAISONNE product names, prices and specifications are f
 `catalog/atelier.png` is a clean canvas export from the application’s procedural wardrobe model. It contains no website interface. The Atelier product page renders that same model live in one view; the studio provides camera controls. Brume and its unused image were removed on 30 October 2026.
 
 Existing editorial/homepage photography remains credited in README.md; editorial images are never used as product gallery fallbacks.
+
+`catalog/aube.jpg` (added for the bedroom edit): [IKEA IDANÄS product image](https://www.ikea.com/us/en/images/products/idanaes-upholstered-bed-frame-gunnared-dark-gray__0953726_pe802891_s5.jpg?f=xxl). The fictional MAISONNE catalogue presents it as Aube.

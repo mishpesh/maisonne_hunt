@@ -24,11 +24,13 @@ No environment variables, API keys or backend are required. Production hosting s
 ## Explore the demo
 
 - `/` — redirects to the furniture collection.
-- `/collection` — eleven products, category/material/finish/price filters, sorting and multilingual search. Supports `?category=sofas` and `?q=alba`.
+- `/collection` — twelve products, category/material/finish/price filters, sorting and multilingual search. Supports `?category=sofas` and `?q=alba`.
 - `/product/atelier` — customisable wardrobe with live 3D product preview. One live product view replaces the old thumbnail gallery. The selected wood finish carries into the configurator.
 - `/atelier` — the parametric wardrobe studio. Try resizing the cabinet, changing individual sections between shelves, hanging rails, drawers and combined storage; choosing wood finishes, independent cabinet and door colours, handles and a back panel; and opening the hinged doors. Drag to rotate, scroll/pinch to zoom, or use the preview buttons. Use three layout presets, undo/redo, save and restore a versioned project in this browser, or export a clean PNG preview. Reset restores the standard model.
 - `/favourites` — saved product selection.
-- `/story` and `/inspiration` — supporting editorial pages.
+- `/story` — the MAISONNE brand story.
+- `/inspiration` — three interior edits with ready-made Unsplash and IKEA photographs.
+- `/inspiration/soft-living`, `/inspiration/quiet-bedroom`, `/inspiration/creative-corner` — individual room pages, two photos each, palette, styling ideas and four linked catalogue products.
 
 Switch between Belgian French (default), Belgian Dutch and English in the header. All catalogue content, controls, forms, notifications and scripted assistant responses are translated. Search recognises all three languages and ignores accents.
 
@@ -36,7 +38,9 @@ Add products in different finishes and quantities; the cart supports updates, re
 
 ## Architecture
 
-- `src/pages/` — homepage, catalogue, product details and editorial pages.
+- `src/pages/` — catalogue, product details, brand story and interior inspiration pages.
+- `src/rooms.ts` — translated room stories, palettes, photograph credits and product recommendations.
+- `src/rooms.css` — responsive inspiration index and room detail layouts.
 - `src/components/` — shared navigation, footer, product cards, modal, cart, assistant, accessible select-only combobox and configurator.
 - `src/components/WardrobePreview.tsx` — actual procedural Three.js model, generated wood textures, lights, shadows, hinged doors and camera controls.
 - `src/configuration.ts` — typed per-section wardrobe state, shared panel/shelf/drawer geometry, presets, save validation and mock pricing.
@@ -57,7 +61,7 @@ The 3D view requires a browser with WebGL and hardware acceleration; an explanat
 
 ## Image sources
 
-Product photographs now use isolated IKEA catalogue photos and two existing isolated chair photos, documented in [IMAGE_SOURCES.md](IMAGE_SOURCES.md). The original editorial JPG assets are sourced from Unsplash. The photo IDs below identify their original sources at `https://images.unsplash.com/<photo-id>`. Product names and specifications are fictional demo content, rather than claims about the photographed manufacturers.
+Product photographs use isolated IKEA catalogue photos and two existing chair photos, documented in [IMAGE_SOURCES.md](IMAGE_SOURCES.md). Ready-made interior imagery and its sources are listed in [ROOM_IMAGE_SOURCES.md](ROOM_IMAGE_SOURCES.md). The original editorial JPG assets are sourced from Unsplash. The photo IDs below identify their original sources at `https://images.unsplash.com/<photo-id>`. Product names and specifications are fictional demo content, rather than claims about the photographed manufacturers.
 
 | Asset | Photo ID |
 | --- | --- |

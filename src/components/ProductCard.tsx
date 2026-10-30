@@ -11,7 +11,7 @@ export default function ProductCard({ product: p }: { product: Product }) {
 
   return (
     <article className="product-card">
-      <div className="product-image">
+      <div className="product-image" data-product={p.id}>
         <Link to={`/product/${p.id}`} aria-label={p.name[lang]}>
           <img
             src={imageUrl(p.image)}
@@ -63,7 +63,12 @@ export default function ProductCard({ product: p }: { product: Product }) {
             aria-label={t(p.finishNames[index])}
           />
         ))}
-        <small>{p.colors.length} {t("finishes")}</small>
+        <small>
+          {p.colors.length}{" "}
+          {t(p.colors.length === 1 ? "finish" : "finishes").toLocaleLowerCase(
+            lang,
+          )}
+        </small>
       </div>
     </article>
   );

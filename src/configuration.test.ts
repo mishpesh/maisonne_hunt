@@ -21,6 +21,7 @@ import {
   unitPrice,
 } from "./data";
 import { translations } from "./i18n";
+import { roomCopy, rooms } from "./rooms";
 import type { BayMode } from "./configuration";
 describe("wardrobe geometry", () => {
   it("preserves exact panel boundaries and usable compartments at every dimensional extreme", () => {
@@ -171,13 +172,11 @@ describe("pricing and catalogue integrity", () => {
       configurationPrice({ ...initialConfiguration, wood: "ash" }),
     );
   });
-  it("keeps eleven distinct products with explicit product-only image paths", () => {
-    expect(new Set(products.map((p) => p.id)).size).toBe(11);
-    expect(new Set(products.map((p) => p.image)).size).toBe(11);
+  it("keeps twelve distinct products with explicit product-only image paths", () => {
+    expect(new Set(products.map((p) => p.id)).size).toBe(12);
+    expect(new Set(products.map((p) => p.image)).size).toBe(12);
     for (const c of categories)
-      expect(products.filter((p) => p.category === c.id)).toHaveLength(
-        c.id === "wardrobes" ? 1 : 2,
-      );
+      expect(products.filter((p) => p.category === c.id)).toHaveLength(c.count);
     expect(products.some((p) => p.id === "brume")).toBe(false);
     for (const p of products) {
       expect(p.colors.length).toBe(p.finishNames.length);
@@ -219,5 +218,38 @@ describe("pricing and catalogue integrity", () => {
         Object.values(translations[locale]).every((v) => v.trim().length > 0),
       ).toBe(true);
     }
+  });
+});
+
+describe("interior inspiration", () => {
+  it("connects each published room to four real products and two bundled photographs", () => {
+    expect(new Set(rooms.map((room) => room.id)).size).toBe(3);
+    for (const room of rooms) {
+      expect(new Set(room.productIds).size).toBe(4);
+      for (const id of room.productIds)
+        expect(products.some((p) => p.id === id)).toBe(true);
+      for (const path of [room.image, room.secondaryImage]) {
+        const bytes = readFileSync(`public${path}`);
+        expect(bytes.length).toBeGreaterThan(10000);
+        expect(bytes.subarray(0, 3).toString("hex")).toBe("ffd8ff");
+      }
+      expect(room.image).not.toBe(room.secondaryImage);
+      expect(
+        room.credits.every((credit) => credit.url.startsWith("https://")),
+      ).toBe(true);
+      for (const locale of ["fr", "nl", "en"] as const) {
+        expect(room.title[locale].length).toBeGreaterThan(5);
+        expect(room.intro[locale].length).toBeGreaterThan(20);
+        expect(
+          room.ideas.every((idea) => idea.title[locale] && idea.body[locale]),
+        ).toBe(true);
+      }
+    }
+  });
+  it("provides the same room controls in French, Dutch and English", () => {
+    for (const lang of ["nl", "en"] as const)
+      expect(Object.keys(roomCopy[lang]).sort()).toEqual(
+        Object.keys(roomCopy.fr).sort(),
+      );
   });
 });
