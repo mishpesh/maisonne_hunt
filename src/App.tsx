@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { products } from "./data";
@@ -7,7 +7,6 @@ import { StoreProvider, useStore } from "./store";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Assistant, Cart } from "./components/Overlays";
-const Home = lazy(() => import("./pages/Home"));
 const Catalog = lazy(() => import("./pages/Catalog"));
 const ProductPage = lazy(() => import("./pages/Product"));
 const EditorialPage = lazy(() => import("./pages/Editorial"));
@@ -24,7 +23,7 @@ function Shell() {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
   useEffect(() => {
-    document.title = `MAISONNE — ${pathname === "/atelier" ? t("studio") : pathname.startsWith("/product/") ? products.find((p) => p.id === pathname.split("/")[2])?.name[lang] || t("collection") : pathname === "/collection" ? t("collection") : pathname === "/favourites" ? t("favourites") : pathname === "/story" ? t("story") : pathname === "/inspiration" ? t("inspiration") : t("heroTitle").replace("\n", " ")}`;
+    document.title = `MAISONNE — ${pathname === "/atelier" ? t("studio") : pathname.startsWith("/product/") ? products.find((p) => p.id === pathname.split("/")[2])?.name[lang] || t("collection") : pathname === "/collection" ? t("collection") : pathname === "/favourites" ? t("favourites") : pathname === "/story" ? t("story") : pathname === "/inspiration" ? t("inspiration") : t("collection")}`;
   }, [pathname, lang, t]);
   return (
     <>
@@ -50,7 +49,7 @@ function Shell() {
               }
             >
               <Routes location={location}>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Navigate to="/collection" replace />} />
                 <Route path="/collection" element={<Catalog />} />
                 <Route
                   path="/favourites"
@@ -63,7 +62,7 @@ function Shell() {
                   path="/inspiration"
                   element={<EditorialPage type="inspiration" />}
                 />
-                <Route path="*" element={<Catalog />} />
+                <Route path="*" element={<Navigate to="/collection" replace />} />
               </Routes>
             </Suspense>
           </motion.div>
