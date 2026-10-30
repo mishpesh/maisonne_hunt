@@ -4755,18 +4755,23 @@ button[role="tab"]:focus-visible {
 .product-image {
   height: auto;
   aspect-ratio: 1;
+  background: #e9eae7;
+  isolation: isolate;
 }
 .product-image img {
   padding: 0;
   object-fit: cover;
-  mix-blend-mode: normal;
-  filter: brightness(0.96);
+  /* Lift near-white studio mattes, then blend them into the grey surface. */
+  mix-blend-mode: multiply;
+  filter: brightness(1.04);
 }
 .product-image[data-product="milo"] {
   background: #bab8b8;
 }
 .product-image[data-product="milo"] img {
   object-fit: contain;
+  mix-blend-mode: normal;
+  filter: brightness(0.96);
   mask-image: linear-gradient(
     90deg,
     transparent,
@@ -4777,6 +4782,8 @@ button[role="tab"]:focus-visible {
 }
 .product-image[data-product="elo"] img {
   object-position: center bottom !important;
+  mix-blend-mode: normal;
+  filter: brightness(0.96);
 }
 .product-info {
   gap: 7px 11px;

@@ -1,4 +1,4 @@
-# Verification — 30 October 2026
+# Verification — 31 October 2026
 
 ## Automated checks
 
@@ -31,3 +31,5 @@ This is viewport testing in a desktop browser, not physical-device or cross-brow
 Screenshots are saved in `artifacts/`.
 
 Latest browser checks cover the inspiration index, bedroom-to-product navigation, in-page product anchors, living room and workspace at 390 × 844, French/Dutch copy, image loading, and absence of horizontal overflow.
+
+31 October: verified all twelve catalogue cards after normalising white and near-white studio mattes onto the light-grey card surface. Full-bleed framing remains intact.
