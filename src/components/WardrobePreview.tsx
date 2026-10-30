@@ -634,7 +634,7 @@ export default function WardrobePreview(props: PreviewProps) {
         fallback={fallback}
         aria-label={`${t("configTitle")} — ${config.width} × ${config.height} × ${config.depth} cm, ${stats.shelves} ${t("shelvesTotal")}`}
       >
-        <color attach="background" args={["#ffffff"]} />
+        <color attach="background" args={["#e9eae7"]} />
         <ambientLight intensity={0.65} />
         <hemisphereLight args={["#ffffff", "#d3cfc5", 1.35]} />
         <directionalLight

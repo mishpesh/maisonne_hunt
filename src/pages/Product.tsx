@@ -24,12 +24,10 @@ export default function ProductPage() {
   const p = products.find((p) => p.id === id);
   const { t, lang, addCart, favourites, toggleFavourite } = useStore();
   const [finish, setFinish] = useState(0),
-    [quantity, setQuantity] = useState(1),
-    [gallery, setGallery] = useState(0);
+    [quantity, setQuantity] = useState(1);
   useEffect(() => {
     setFinish(0);
     setQuantity(1);
-    setGallery(0);
   }, [id]);
   if (!p)
     return (
@@ -73,24 +71,10 @@ export default function ProductPage() {
                       finish === 1 ? "walnut" : finish === 2 ? "ash" : "oak",
                   }}
                   compact
-                  view={
-                    gallery === 1
-                      ? "front"
-                      : gallery === 2
-                        ? "detail"
-                        : "perspective"
-                  }
                 />
               </Suspense>
             ) : (
-              <img
-                src={imageUrl(p.gallery?.[gallery] || p.image)}
-                alt={p.name[lang]}
-                style={{
-                  transform:
-                    gallery === 1 && !p.gallery ? "scale(1.45)" : undefined,
-                }}
-              />
+              <img src={imageUrl(p.image)} alt={p.name[lang]} />
             )}
             {p.badge && <span className="product-badge">{t(p.badge)}</span>}
             {p.custom && (
@@ -98,38 +82,6 @@ export default function ProductPage() {
                 <Box size={16} />
                 {t("studioFullProduct")} · 3D
               </span>
-            )}
-          </div>
-          <div className="gallery-thumbnails">
-            {Array.from(
-              { length: p.custom ? 3 : p.gallery?.length || 2 },
-              (_, i) => {
-                const label = p.custom
-                  ? i === 1
-                    ? "studioFront"
-                    : i === 2
-                      ? "studioDetailView"
-                      : "studioPerspective"
-                  : i === 1
-                    ? "studioDetailView"
-                    : "studioPhotoView";
-                return (
-                  <button
-                    className={gallery === i ? "active" : ""}
-                    key={i}
-                    onClick={() => setGallery(i)}
-                    aria-label={`${p.name[lang]} — ${t(label)}`}
-                    aria-pressed={gallery === i}
-                  >
-                    {p.custom ? (
-                      <Box size={27} strokeWidth={1} />
-                    ) : (
-                      <img src={imageUrl(p.gallery?.[i] || p.image)} alt="" />
-                    )}
-                    {p.custom && <span>{t(label)}</span>}
-                  </button>
-                );
-              },
             )}
           </div>
         </div>

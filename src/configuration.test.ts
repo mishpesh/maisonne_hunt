@@ -171,11 +171,14 @@ describe("pricing and catalogue integrity", () => {
       configurationPrice({ ...initialConfiguration, wood: "ash" }),
     );
   });
-  it("keeps twelve distinct products with explicit product-only image paths", () => {
-    expect(new Set(products.map((p) => p.id)).size).toBe(12);
-    expect(new Set(products.map((p) => p.image)).size).toBe(12);
+  it("keeps eleven distinct products with explicit product-only image paths", () => {
+    expect(new Set(products.map((p) => p.id)).size).toBe(11);
+    expect(new Set(products.map((p) => p.image)).size).toBe(11);
     for (const c of categories)
-      expect(products.filter((p) => p.category === c.id)).toHaveLength(2);
+      expect(products.filter((p) => p.category === c.id)).toHaveLength(
+        c.id === "wardrobes" ? 1 : 2,
+      );
+    expect(products.some((p) => p.id === "brume")).toBe(false);
     for (const p of products) {
       expect(p.colors.length).toBe(p.finishNames.length);
       expect(imageUrl(p.image)).toMatch(
@@ -199,10 +202,10 @@ describe("pricing and catalogue integrity", () => {
     ).toContain("elo");
     expect(
       products.filter((p) => matchesProduct(p, "wardrobe")).map((p) => p.id),
-    ).toEqual(["atelier", "brume"]);
+    ).toEqual(["atelier"]);
     expect(
       products.filter((p) => matchesProduct(p, "kleerkast")).map((p) => p.id),
-    ).toEqual(["atelier", "brume"]);
+    ).toEqual(["atelier"]);
     expect(products.some((p) => matchesProduct(p, "zzzz-unavailable"))).toBe(
       false,
     );

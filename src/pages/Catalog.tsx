@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ChevronDown, ChevronRight, Heart, Search, X } from "lucide-react";
+import { ChevronRight, Heart, Search, X } from "lucide-react";
 import type { TranslationKey } from "../i18n";
 import { categories, matchesProduct, products } from "../data";
 import { useStore } from "../store";
 import ProductCard from "../components/ProductCard";
+import Select from "../components/Select";
 
 type MaterialFilter = "all" | "wood" | "upholstery" | "metal";
 
@@ -58,7 +59,11 @@ const filterCopy = {
 
 function materialGroup(value: string): Exclude<MaterialFilter, "all"> {
   const normalised = value.toLocaleLowerCase();
-  if (["tissu", "stof", "fabric", "boucle", "textile"].some((part) => normalised.includes(part))) {
+  if (
+    ["tissu", "stof", "fabric", "upholstery", "boucle", "textile"].some(
+      (part) => normalised.includes(part),
+    )
+  ) {
     return "upholstery";
   }
   if (["métal", "metal", "metaal"].some((part) => normalised.includes(part))) {
@@ -77,13 +82,18 @@ export default function Catalog({
   const category = params.get("category") || "all";
   const query = params.get("q") || "";
   const [sort, setSort] = useState("recommended");
-  const [selectedMaterial, setSelectedMaterial] = useState<MaterialFilter>("all");
-  const [selectedFinish, setSelectedFinish] = useState<TranslationKey | "all">("all");
+  const [selectedMaterial, setSelectedMaterial] =
+    useState<MaterialFilter>("all");
+  const [selectedFinish, setSelectedFinish] = useState<TranslationKey | "all">(
+    "all",
+  );
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [customOnly, setCustomOnly] = useState(false);
   const labels = filterCopy[lang];
-  const finishOptions = Array.from(new Set(products.flatMap((product) => product.finishNames)));
+  const finishOptions = Array.from(
+    new Set(products.flatMap((product) => product.finishNames)),
+  );
   const activeFilterCount = [
     selectedMaterial !== "all",
     selectedFinish !== "all",
@@ -97,8 +107,10 @@ export default function Catalog({
       (!favouritesOnly || favourites.includes(product.id)) &&
       (category === "all" || product.category === category) &&
       matchesProduct(product, query) &&
-      (selectedMaterial === "all" || materialGroup(product.material[lang]) === selectedMaterial) &&
-      (selectedFinish === "all" || product.finishNames.includes(selectedFinish)) &&
+      (selectedMaterial === "all" ||
+        materialGroup(product.material[lang]) === selectedMaterial) &&
+      (selectedFinish === "all" ||
+        product.finishNames.includes(selectedFinish)) &&
       (minPrice === "" || product.price >= Number(minPrice)) &&
       (maxPrice === "" || product.price <= Number(maxPrice)) &&
       (!customOnly || Boolean(product.custom)),
@@ -107,7 +119,9 @@ export default function Catalog({
   if (sort === "priceAsc") list = [...list].sort((a, b) => a.price - b.price);
   if (sort === "priceDesc") list = [...list].sort((a, b) => b.price - a.price);
   if (sort === "nameSort") {
-    list = [...list].sort((a, b) => a.name[lang].localeCompare(b.name[lang], lang));
+    list = [...list].sort((a, b) =>
+      a.name[lang].localeCompare(b.name[lang], lang),
+    );
   }
 
   const clearFilters = () => {
@@ -128,7 +142,9 @@ export default function Catalog({
         <span>{t(favouritesOnly ? "favourites" : "collection")}</span>
       </div>
       <div className="catalog-heading">
-        <p className="eyebrow">MAISONNE / {t(favouritesOnly ? "favourites" : "collection")}</p>
+        <p className="eyebrow">
+          MAISONNE / {t(favouritesOnly ? "favourites" : "collection")}
+        </p>
         <h1>{t(favouritesOnly ? "favouritesTitle" : "catalogTitle")}</h1>
         <p>{t(favouritesOnly ? "favouritesEmpty" : "catalogText")}</p>
       </div>
@@ -171,15 +187,15 @@ export default function Catalog({
             </button>
           ))}
         </div>
-        <label className="sort-select">
-          <span className="sr-only">{t("sort")}</span>
-          <select value={sort} onChange={(event) => setSort(event.target.value)}>
-            {["recommended", "priceAsc", "priceDesc", "nameSort"].map((key) => (
-              <option key={key} value={key}>{t(key as TranslationKey)}</option>
-            ))}
-          </select>
-          <ChevronDown size={14} />
-        </label>
+        <Select
+          className="sort-control"
+          label={t("sort")}
+          value={sort}
+          onChange={setSort}
+          options={["recommended", "priceAsc", "priceDesc", "nameSort"].map(
+            (key) => ({ value: key, label: t(key as TranslationKey) }),
+          )}
+        />
       </div>
 
       <section className="catalog-filter-panel" aria-label={labels.refine}>
@@ -188,24 +204,35 @@ export default function Catalog({
           {activeFilterCount > 0 && <span>{activeFilterCount}</span>}
         </div>
         <div className="catalog-filter-bar">
-          <label className="catalog-filter-field">
+          <div className="catalog-filter-field">
             <span>{labels.material}</span>
-            <select value={selectedMaterial} onChange={(event) => setSelectedMaterial(event.target.value as MaterialFilter)}>
-              <option value="all">{labels.allMaterials}</option>
-              <option value="wood">{labels.wood}</option>
-              <option value="upholstery">{labels.upholstery}</option>
-              <option value="metal">{labels.metal}</option>
-            </select>
-          </label>
-          <label className="catalog-filter-field">
+            <Select
+              label={labels.material}
+              value={selectedMaterial}
+              onChange={setSelectedMaterial}
+              options={(["all", "wood", "upholstery", "metal"] as const).map(
+                (value) => ({
+                  value,
+                  label: value === "all" ? labels.allMaterials : labels[value],
+                }),
+              )}
+            />
+          </div>
+          <div className="catalog-filter-field">
             <span>{labels.finish}</span>
-            <select value={selectedFinish} onChange={(event) => setSelectedFinish(event.target.value as TranslationKey | "all")}>
-              <option value="all">{labels.allFinishes}</option>
-              {finishOptions.map((finish) => (
-                <option key={finish} value={finish}>{t(finish)}</option>
-              ))}
-            </select>
-          </label>
+            <Select
+              label={labels.finish}
+              value={selectedFinish}
+              onChange={setSelectedFinish}
+              options={[
+                { value: "all", label: labels.allFinishes },
+                ...finishOptions.map((finish) => ({
+                  value: finish,
+                  label: t(finish),
+                })),
+              ]}
+            />
+          </div>
           <div className="catalog-price-range">
             <span>{labels.price}</span>
             <div>
@@ -230,11 +257,19 @@ export default function Catalog({
             </div>
           </div>
           <label className="catalog-custom-filter">
-            <input type="checkbox" checked={customOnly} onChange={(event) => setCustomOnly(event.target.checked)} />
+            <input
+              type="checkbox"
+              checked={customOnly}
+              onChange={(event) => setCustomOnly(event.target.checked)}
+            />
             <span>{labels.custom}</span>
           </label>
           {activeFilterCount > 0 && (
-            <button className="catalog-filter-reset" type="button" onClick={clearFilters}>
+            <button
+              className="catalog-filter-reset"
+              type="button"
+              onClick={clearFilters}
+            >
               {labels.clear}
               <X size={14} />
             </button>
@@ -247,19 +282,25 @@ export default function Catalog({
       </p>
       {list.length ? (
         <div className="product-grid catalog-grid">
-          {list.map((product) => <ProductCard key={product.id} product={product} />)}
+          {list.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       ) : favouritesOnly && favourites.length === 0 ? (
         <div className="empty-state">
           <Heart size={32} strokeWidth={1} />
           <h2>{t("favouritesEmpty")}</h2>
-          <Link className="button primary" to="/collection">{t("explore")}</Link>
+          <Link className="button primary" to="/collection">
+            {t("explore")}
+          </Link>
         </div>
       ) : (
         <div className="empty-state">
           <Search size={32} strokeWidth={1} />
           <h2>{t("noResults")}</h2>
-          <button className="button outline" onClick={clearFilters}>{t("resetFilters")}</button>
+          <button className="button outline" onClick={clearFilters}>
+            {t("resetFilters")}
+          </button>
         </div>
       )}
     </main>

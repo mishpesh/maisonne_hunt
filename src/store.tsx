@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { translations } from "./i18n";
 import type { Language, TranslationKey } from "./i18n";
+import { products } from "./data";
 import type { Product } from "./data";
 export type CartItem = { id: string; finish: number; quantity: number };
 function stored<T>(key: string, fallback: T): T {
@@ -46,6 +47,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       ? x.filter(
           (i) =>
             typeof i.id === "string" &&
+            products.some((p) => p.id === i.id) &&
             Number.isInteger(i.quantity) &&
             i.quantity > 0 &&
             Number.isInteger(i.finish),
@@ -54,7 +56,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   });
   const [favourites, setFavourites] = useState<string[]>(() => {
     const x = stored<string[]>("maisonne-favourites", []);
-    return Array.isArray(x) ? x.filter((i) => typeof i === "string") : [];
+    return Array.isArray(x)
+      ? x.filter(
+          (i) => typeof i === "string" && products.some((p) => p.id === i),
+        )
+      : [];
   });
   const [cartOpen, setCartOpen] = useState(false),
     [chatOpen, setChatOpen] = useState(false),

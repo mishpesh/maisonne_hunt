@@ -50,6 +50,7 @@ import type {
 import { useConfiguration } from "../useConfiguration";
 import type { WardrobeView } from "./WardrobePreview";
 import QuoteRequest from "./QuoteRequest";
+import Select from "./Select";
 import Modal from "./Modal";
 import "../studio.css";
 const WardrobePreview = lazy(() => import("./WardrobePreview"));
@@ -671,18 +672,17 @@ export default function Configurator() {
             </div>
           </div>
           <div className="studio-stage-footer">
-            <div className="view-selector">
-              <select
-                aria-label={t("studioPerspective")}
-                value={view}
-                onChange={(e) => setView(e.target.value as WardrobeView)}
-              >
-                <option value="perspective">{t("studioPerspective")}</option>
-                <option value="front">{t("studioFront")}</option>
-                <option value="side">{t("studioSide")}</option>
-              </select>
-              <ChevronDown size={14} />
-            </div>
+            <Select
+              className="view-selector"
+              label={t("studioPerspective")}
+              value={view}
+              onChange={setView}
+              options={[
+                { value: "perspective", label: t("studioPerspective") },
+                { value: "front", label: t("studioFront") },
+                { value: "side", label: t("studioSide") },
+              ]}
+            />
             <div className="studio-tools">
               <button
                 className="icon-button"

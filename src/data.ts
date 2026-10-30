@@ -255,26 +255,6 @@ export const products: Product[] = [
       "Veneered timber and lacquered panels",
     ),
   },
-  {
-    id: "brume",
-    name: names("Armoire Brume", "Brume kleerkast", "Brume wardrobe"),
-    description: names(
-      "Des rangements simples et bien pensés.",
-      "Eenvoudig en slim opbergen.",
-      "Simple, thoughtful storage.",
-    ),
-    category: "wardrobes",
-    image: "catalog/brume.png",
-    price: 990,
-    colors: ["#9aa18c", "#e8e1d1"],
-    finishNames: ["sage", "cream"],
-    dimensions: [180, 220, 60],
-    material: names(
-      "Panneaux plaqués bois",
-      "Houtfineer panelen",
-      "Wood-veneered panels",
-    ),
-  },
 ];
 export const featured = products.slice(0, 4);
 

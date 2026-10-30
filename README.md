@@ -23,9 +23,9 @@ No environment variables, API keys or backend are required. Production hosting s
 
 ## Explore the demo
 
-- `/` — editorial homepage, six furniture categories, bestsellers and 3D studio preview.
-- `/collection` — twelve products, category filters, sorting and multilingual search. Supports `?category=sofas` and `?q=alba`.
-- `/product/atelier` — customisable wardrobe with live 3D product preview. The selected wood finish carries into the configurator.
+- `/` — redirects to the furniture collection.
+- `/collection` — eleven products, category/material/finish/price filters, sorting and multilingual search. Supports `?category=sofas` and `?q=alba`.
+- `/product/atelier` — customisable wardrobe with live 3D product preview. One live product view replaces the old thumbnail gallery. The selected wood finish carries into the configurator.
 - `/atelier` — the parametric wardrobe studio. Try resizing the cabinet, changing individual sections between shelves, hanging rails, drawers and combined storage; choosing wood finishes, independent cabinet and door colours, handles and a back panel; and opening the hinged doors. Drag to rotate, scroll/pinch to zoom, or use the preview buttons. Use three layout presets, undo/redo, save and restore a versioned project in this browser, or export a clean PNG preview. Reset restores the standard model.
 - `/favourites` — saved product selection.
 - `/story` and `/inspiration` — supporting editorial pages.
@@ -37,7 +37,7 @@ Add products in different finishes and quantities; the cart supports updates, re
 ## Architecture
 
 - `src/pages/` — homepage, catalogue, product details and editorial pages.
-- `src/components/` — shared navigation, footer, product cards, modal, cart, assistant and configurator.
+- `src/components/` — shared navigation, footer, product cards, modal, cart, assistant, accessible select-only combobox and configurator.
 - `src/components/WardrobePreview.tsx` — actual procedural Three.js model, generated wood textures, lights, shadows, hinged doors and camera controls.
 - `src/configuration.ts` — typed per-section wardrobe state, shared panel/shelf/drawer geometry, presets, save validation and mock pricing.
 - `src/useConfiguration.ts` — bounded, immutable undo/redo history.
@@ -45,7 +45,7 @@ Add products in different finishes and quantities; the cart supports updates, re
 - `src/data.ts` — local catalogue, image mapping, multilingual search and variant pricing.
 - `src/i18n.ts` — complete, type-checked FR / NL / EN dictionaries and Belgian EUR formatting.
 - `src/store.tsx` — shared language, favourites, cart and overlay state.
-- `src/styles.css` — responsive design system using the supplied cream, black, blue and green palette with light geometric Jost typography.
+- `src/styles.css` — responsive design system using the supplied cream, black, blue and green palette with light-grey surfaces and locally hosted Poppins typography.
 
 The wardrobe uses centimetres in the UI and metres internally. Panel thickness, base, dividers and shelf boundaries share a single geometry calculation. The camera reframes when dimensions or viewport size change. The 3D code and page components are loaded in separate chunks; compact 3D previews render on demand.
 
@@ -53,7 +53,7 @@ The wardrobe uses centimetres in the UI and metres internally. Panel thickness, 
 
 MAISONNE and the catalogue are fictional. All prices, delivery estimates, return conditions and quotes are illustrative. Payments, orders, newsletter subscriptions and quote submissions are simulated. Form values and assistant messages are held only in memory and are not sent to a server. Language, favourites, cart and explicitly saved studio projects are saved in the browser’s local storage. There is no live AI connection.
 
-The 3D view requires a browser with WebGL and hardware acceleration; an explanatory fallback is included. Photography is bundled locally; Jost is loaded from Google Fonts, with local font fallbacks.
+The 3D view requires a browser with WebGL and hardware acceleration; an explanatory fallback is included. Photography and Poppins font files are bundled locally. See FONT_SOURCES.md for typography references and licensing.
 
 ## Image sources
 
@@ -73,7 +73,7 @@ Product photographs now use isolated IKEA catalogue photos and two existing isol
 | Bedroom | photo-1616594039964-ae9021a400a0 |
 | Wall storage | photo-1594026112284-02bb6f3352fe |
 
-`catalog/atelier.png` and `catalog/brume.png` were captured from this application's real parametric model so the wardrobe catalogue imagery matches the interactive model.
+`catalog/atelier.png` was captured from this application's real parametric model so the wardrobe catalogue imagery matches the interactive model.
 
 ## Sites hosting
 

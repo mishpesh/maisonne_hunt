@@ -1,28 +1,23 @@
-# Verification — 28 October 2026
+# Verification — 30 October 2026
 
 ## Automated checks
 
-- `npm run build`: TypeScript validation and Vite production bundling.
-- `npm test`: 11 passing tests. Covers physical panel/compartment bounds at supported dimensional extremes; shelf/drawer/rail clearance across layouts; independent presets; narrow-cabinet section limits; immutable undo/redo; versioned save validation; component/material pricing; advertised and cart wardrobe price consistency; 12 distinct products and valid local JPEG/PNG assets; multilingual accent-insensitive search; and FR/NL/EN translation parity.
-- Dependency installation audit reports zero vulnerabilities.
-- All 12 catalogue image elements were inspected in the browser: complete, with nonzero natural width. Wardrobe PNGs were exported from the live WebGL canvas through the application's export preview; the obsolete screenshot assets were removed.
+- `npm test`: 11 passing checks covering cabinet geometry and clearance, history, persistence, price consistency, image signatures, translation parity and multilingual search. Catalogue integrity now verifies 11 products, one configurable wardrobe and no Brume entry.
+- `npm run build`: TypeScript and Vite production build.
 
 ## Browser checks for this revision
 
-Inspected in the in-app desktop browser at its default 1280 × 720 viewport and a temporary 390 × 844 mobile viewport.
+Tested in the in-app browser at its default 1280 × 720 viewport and a temporary 390 × 844 mobile viewport.
 
-- Catalogue product photography, readable names/prices and image loading.
-- Wardrobe product gallery: perspective/front/detail controls, live material change and matching price; walnut item addition and matching cart total.
-- Dimensions: numeric editing to the 80 cm minimum automatically reduces three sections to two and disables further section additions.
-- Independent section selection and drawer count changes.
-- Layout presets, undo/redo, save/restore and reset.
-- Independent cabinet/door colours, hinged-door enablement and animated opening/closing.
-- Clean PNG export preview and saved image content.
-- Quote form configuration summary and simulated success using dummy example.com contact data; no email is sent.
-- French, Dutch and English translated studio controls.
-- Mobile sticky stage and section tabs, readable controls, absence of horizontal overflow.
-- Fresh production build inspection and published-site handoff complete the release checks.
+- Light-grey page, photograph and 3D backgrounds; locally hosted Poppins type; enlarged product materials, dimensions and prices.
+- One main image on ordinary product pages, no duplicated zoom image or redundant thumbnail strip. Atelier retains one live 3D view and access to its studio.
+- Brume removed from catalogue, related products, search and persisted cart/favourites hydration.
+- Custom material and finish menus: pointer selection, keyboard arrows, Home/End, Enter, Escape, outside dismissal and selection checkmark. Mouse focus has no external outline; keyboard focus keeps an internal underline.
+- Material/finish/price filtering combined with ascending price sort; reset restores the full catalogue.
+- Studio view selection through the same shared combobox.
+- French and English mobile labels, mobile options wrapping and absence of horizontal overflow.
+- Product photo count and thumbnail absence inspected directly in the rendered page.
 
-This is viewport testing in a desktop browser, not physical-device or cross-browser certification. Payments, orders and quote delivery remain simulated. The 3D preview requires WebGL.
+This is viewport testing in a desktop browser, not physical-device or cross-browser certification. Commerce and quote submission remain simulated.
 
 Screenshots are saved in `artifacts/`.

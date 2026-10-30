@@ -15,6 +15,6 @@ Updated 28 October 2026. MAISONNE product names, prices and specifications are f
 
 `catalog/milo.jpg` and `catalog/elo.jpg` retain the isolated Unsplash chair images from the original project (`photo-1598300042247-d088f8ab3a91` and `photo-1567538096630-e0c55bd6374c`).
 
-`catalog/atelier.png` and `catalog/brume.png` are clean canvas exports from the application’s procedural wardrobe model. They contain no website interface. The Atelier product gallery renders that same model live in perspective, front and detail views.
+`catalog/atelier.png` is a clean canvas export from the application’s procedural wardrobe model. It contains no website interface. The Atelier product page renders that same model live in one view; the studio provides camera controls. Brume and its unused image were removed on 30 October 2026.
 
 Existing editorial/homepage photography remains credited in README.md; editorial images are never used as product gallery fallbacks.
