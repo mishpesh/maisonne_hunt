@@ -4,9 +4,11 @@ import { imageUrl } from "../data";
 import type { Product } from "../data";
 import { money } from "../i18n";
 import { useStore } from "../store";
+
 export default function ProductCard({ product: p }: { product: Product }) {
   const { lang, t, favourites, toggleFavourite } = useStore();
   const fav = favourites.includes(p.id);
+
   return (
     <article className="product-card">
       <div className="product-image">
@@ -19,7 +21,7 @@ export default function ProductCard({ product: p }: { product: Product }) {
           />
         </Link>
         {p.badge && (
-          <span className={`product-badge ${p.custom ? "blue" : ""}`}>
+          <span className={`product-badge ${p.custom ? "custom" : ""}`}>
             {t(p.badge)}
           </span>
         )}
@@ -37,11 +39,15 @@ export default function ProductCard({ product: p }: { product: Product }) {
         </Link>
       </div>
       <div className="product-info">
-        <div>
+        <div className="product-copy">
+          <p className="product-category">{t(p.category)}</p>
           <Link to={`/product/${p.id}`}>
             <h3>{p.name[lang]}</h3>
           </Link>
-          <p>{t(p.category)}</p>
+          <p className="product-material">{p.material[lang]}</p>
+          <p className="product-dimensions">
+            {p.dimensions[0]} × {p.dimensions[1]} × {p.dimensions[2]} cm
+          </p>
         </div>
         <span className="price">
           {p.custom && <small>{t("from")} </small>}
@@ -49,12 +55,15 @@ export default function ProductCard({ product: p }: { product: Product }) {
         </span>
       </div>
       <div className="card-swatches">
-        {p.colors.map((c, i) => (
-          <span key={c} style={{ background: c }} title={t(p.finishNames[i])} />
+        {p.colors.map((color, index) => (
+          <span
+            key={color}
+            style={{ background: color }}
+            title={t(p.finishNames[index])}
+            aria-label={t(p.finishNames[index])}
+          />
         ))}
-        <small>
-          {p.colors.length} {t("finishes")}
-        </small>
+        <small>{p.colors.length} {t("finishes")}</small>
       </div>
     </article>
   );
