@@ -128,13 +128,7 @@ export default function Header() {
         )}
       </header>
       <div className="announcement">
-        <span>
-          {t("announcement")}
-          <span className="announcement-detail">
-            {" "}
-            {t("announcementDetail")}
-          </span>
-        </span>
+        <span>{t("demo")}</span>
         <Link to="/collection">
           {t("discover")}
           <ArrowRight size={13} />
