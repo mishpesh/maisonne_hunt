@@ -1,5 +1,6 @@
+import ActionArrow from "../components/ActionArrow";
 import { Link, Navigate, useParams } from "react-router-dom";
-import { ArrowDown, ArrowLeft, ArrowUpRight, ChevronRight } from "lucide-react";
+import { ArrowDown, ArrowLeft, ChevronRight } from "lucide-react";
 import { products } from "../data";
 import { roomCopy, rooms } from "../rooms";
 import type { RoomStory } from "../rooms";
@@ -27,7 +28,7 @@ function RoomCard({ room, index }: { room: RoomStory; index: number }) {
       <p>{room.intro[lang]}</p>
       <span className="room-card-link">
         {copy.explore}
-        <ArrowUpRight size={18} />
+        <ActionArrow size={18} />
       </span>
     </Link>
   );
@@ -94,7 +95,7 @@ export default function InspirationPage() {
           <span>MAISONNE / {copy.photo}</span>
           <a href={room.credits[0].url} target="_blank" rel="noreferrer">
             {room.credits[0].name}
-            <ArrowUpRight size={12} />
+            <ActionArrow size={12} />
           </a>
         </figcaption>
       </figure>
@@ -179,7 +180,7 @@ export default function InspirationPage() {
             rel="noreferrer"
           >
             {credit.name}
-            <ArrowUpRight size={12} />
+            <ActionArrow size={12} />
           </a>
         ))}
       </div>

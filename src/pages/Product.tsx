@@ -1,7 +1,7 @@
+import ActionArrow from "../components/ActionArrow";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
-  ArrowUpRight,
   Box,
   Check,
   ChevronRight,
@@ -131,7 +131,7 @@ export default function ProductPage() {
             >
               <Box size={18} />
               {t("customize3d")}
-              <ArrowUpRight size={18} />
+              <ActionArrow size={18} />
             </Link>
           ) : (
             <div className="add-cart-row">
@@ -222,7 +222,7 @@ export default function ProductPage() {
           <h2>{t("related")}</h2>
           <Link className="text-link" to="/collection">
             {t("seeAll")}
-            <ArrowUpRight size={16} />
+            <ActionArrow size={16} />
           </Link>
         </div>
         <div className="product-grid">

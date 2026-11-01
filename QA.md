@@ -1,4 +1,4 @@
-# Verification — 31 October 2026
+# Verification — 1 November 2026
 
 ## Automated checks
 
@@ -33,3 +33,5 @@ Screenshots are saved in `artifacts/`.
 Latest browser checks cover the inspiration index, bedroom-to-product navigation, in-page product anchors, living room and workspace at 390 × 844, French/Dutch copy, image loading, and absence of horizontal overflow.
 
 31 October: verified all twelve catalogue cards after normalising white and near-white studio mattes onto the light-grey card surface. Full-bleed framing remains intact.
+
+1 November: all former diagonal action arrows now use the owner-supplied PNG silhouette through a shared current-colour SVG mask. Verified the white icon on the dark product CTA and dark icons in the inspiration links. The bundled PNG matches the supplied file byte for byte.

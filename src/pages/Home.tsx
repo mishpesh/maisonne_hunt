@@ -1,9 +1,9 @@
+import ActionArrow from "../components/ActionArrow";
 import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowDown,
   ArrowRight,
-  ArrowUpRight,
   Box,
   Check,
   Leaf,
@@ -41,7 +41,7 @@ export default function Home() {
           <p className="hero-description">{t("heroText")}</p>
           <Link className="button primary" to="/collection">
             {t("explore")}
-            <ArrowUpRight size={19} />
+            <ActionArrow size={19} />
           </Link>
           <Link className="hero-secondary" to="/atelier">
             <Box size={18} />
@@ -77,7 +77,7 @@ export default function Home() {
               to="/inspiration"
               aria-label={t("inspiration")}
             >
-              <ArrowUpRight size={23} />
+              <ActionArrow size={23} />
             </Link>
           </div>
           <div className="hero-pagination">
@@ -112,7 +112,7 @@ export default function Home() {
           </div>
           <Link className="text-link underlined" to="/collection">
             {t("allFurniture")}
-            <ArrowUpRight size={16} />
+            <ActionArrow size={16} />
           </Link>
         </div>
         <div className="category-grid">
@@ -127,7 +127,7 @@ export default function Home() {
               </div>
               <h3>
                 {t(c.id)}
-                <ArrowUpRight size={16} />
+                <ActionArrow size={16} />
               </h3>
               <small>
                 0{c.count} {t("products")}
@@ -146,7 +146,7 @@ export default function Home() {
             </div>
             <Link className="text-link underlined" to="/collection">
               {t("seeAll")}
-              <ArrowUpRight size={16} />
+              <ActionArrow size={16} />
             </Link>
           </div>
           <div className="product-grid">
@@ -177,7 +177,7 @@ export default function Home() {
           </ul>
           <Link className="button primary" to="/atelier">
             {t("customCta")}
-            <ArrowUpRight size={19} />
+            <ActionArrow size={19} />
           </Link>
         </div>
         <div className="custom-promo-image">

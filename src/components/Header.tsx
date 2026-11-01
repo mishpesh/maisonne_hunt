@@ -1,8 +1,8 @@
+import ActionArrow from "./ActionArrow";
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   ArrowRight,
-  ArrowUpRight,
   ChevronRight,
   Heart,
   MapPin,
@@ -121,7 +121,7 @@ export default function Header() {
             {links.map(([path, key]) => (
               <Link key={path} to={path}>
                 {t(key)}
-                <ArrowUpRight size={17} />
+                <ActionArrow size={17} />
               </Link>
             ))}
           </nav>

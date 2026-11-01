@@ -1,6 +1,7 @@
+import ActionArrow from "./ActionArrow";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Check, Leaf, Sparkles } from "lucide-react";
+import { Check, Leaf, Sparkles } from "lucide-react";
 import type { TranslationKey } from "../i18n";
 import { useStore } from "../store";
 import Modal from "./Modal";
@@ -38,7 +39,7 @@ export default function Footer() {
                 />
                 <button type="submit">
                   {t("subscribe")}
-                  <ArrowUpRight size={19} />
+                  <ActionArrow size={19} />
                 </button>
               </form>
             )}

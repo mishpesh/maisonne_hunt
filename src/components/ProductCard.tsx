@@ -1,4 +1,5 @@
-import { Heart, ArrowUpRight } from "lucide-react";
+import ActionArrow from "./ActionArrow";
+import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { imageUrl } from "../data";
 import type { Product } from "../data";
@@ -35,7 +36,7 @@ export default function ProductCard({ product: p }: { product: Product }) {
         </button>
         <Link to={`/product/${p.id}`} className="product-reveal">
           {t("viewProduct")}
-          <ArrowUpRight size={17} />
+          <ActionArrow size={17} />
         </Link>
       </div>
       <div className="product-info">

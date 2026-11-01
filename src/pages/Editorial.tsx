@@ -1,5 +1,6 @@
+import ActionArrow from "../components/ActionArrow";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useStore } from "../store";
 export default function EditorialPage() {
   const { t } = useStore();
@@ -28,7 +29,7 @@ export default function EditorialPage() {
             <p>{t("storyBody2")}</p>
             <Link className="button primary" to="/collection">
               {t("explore")}
-              <ArrowUpRight size={18} />
+              <ActionArrow size={18} />
             </Link>
           </div>
         </div>

@@ -20,3 +20,5 @@ Updated 28 October 2026. MAISONNE product names, prices and specifications are f
 Existing editorial/homepage photography remains credited in README.md; editorial images are never used as product gallery fallbacks.
 
 `catalog/aube.jpg` (added for the bedroom edit): [IKEA IDANÄS product image](https://www.ikea.com/us/en/images/products/idanaes-upholstered-bed-frame-gunnared-dark-gray__0953726_pe802891_s5.jpg?f=xxl). The fictional MAISONNE catalogue presents it as Aube.
+
+`public/images/icons/action-chevron.png`: icon supplied by the project owner on 1 November 2026. The original PNG is retained unchanged; `ActionArrow.tsx` uses its alpha silhouette with the surrounding text colour.
